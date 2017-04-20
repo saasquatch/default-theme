@@ -99,7 +99,13 @@
                                       "type":"string",
                                       "format":"markdown",
                                       "title":"Success Text",
-                                      "default":"Success! Your upgrade is complete"
+                                      "default":"Success! Your upgrade is complete",
+                                      "options":{
+                                         "input_height":"100px",
+                                         "validate":[
+                                            "handlebars"
+                                         ]
+                                      }
                                     },
                                     "heading":{
                                        "default":"Give ${{math programDetails.referredRewardDetails.credit ' / 100'}} and Get ${{math programDetails.referrerRewardDetails.credit ' / 100'}}!"
