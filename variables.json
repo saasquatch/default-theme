@@ -95,6 +95,12 @@
                                     "headerColor":{
                                        "default":"#4486E1"
                                     },
+                                    "successText": {
+                                      "type":"string",
+                                      "format":"markdown",
+                                      "title":"Success Text",
+                                      "default":"Success! Your upgrade is complete"
+                                    },
                                     "heading":{
                                        "default":"Give ${{math programDetails.referredRewardDetails.credit ' / 100'}} and Get ${{math programDetails.referrerRewardDetails.credit ' / 100'}}!"
                                     },
