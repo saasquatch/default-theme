@@ -44,14 +44,17 @@
   <body>
     <main class="squatch-container squatch-container-{{lower mode}}">
       <div class="squatch-body">
-        {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
-        {{!-- {{> (stringFormat 'programs/%s/title' programDetails.referredRewardDetails.rewardType) }} --}}
+
+        <div class="success-image"></div>
+        <!-- {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.heading'}} -->
+        <div class="success-text">
+          Success! Your upgrade is complete
+        </div>
+
         {{> programs/CREDIT/title}}
 
         <button class="close squatch-header-close" data-close-panel="#squatch-panel">Close</button>
 
-        {{!-- TODO: Switch the second line below out with the line directly below when we've updated to Handlebars.java 2.2.0 --}}
-        {{!-- {{> (stringFormat 'programs/%s/lead' programDetails.referredRewardDetails.rewardType) }} --}}
         {{> programs/CREDIT/lead}}
         {{> cta}}
         {{> share}}
