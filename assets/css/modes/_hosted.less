@@ -11,7 +11,9 @@
     display: block;
   }
 
-  .fbMobile {
+  .fbMobile,
+  .twMobile,
+  .linkedinMobile {
     display: none;
 
     &.mobile-and-desktop,
@@ -29,31 +31,9 @@
     }
   }
 
-  .fbShare {
-    @media (max-width: @screen-sm-max) {
-      display: none;
-    }
-  }
-
-  .twMobile {
-    display: none;
-
-    &.mobile-and-desktop,
-    &.mobile-only {
-      @media (max-width: @screen-sm-max) {
-        display: block;
-      }
-    }
-
-    &.hidden,
-    &.desktop-only {
-      @media (max-width: @screen-sm-max) {
-        display: none;
-      }
-    }
-  }
-
-  .twShare {
+  .fbShare,
+  .twShare,
+  .linkedinShare {
     @media (max-width: @screen-sm-max) {
       display: none;
     }
