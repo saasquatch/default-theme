@@ -166,3 +166,27 @@ function emailHandler() {
     });
   }
 }
+
+function linkedinHandler() {
+  var linkedinBtn = document.getElementsByClassName('linkedinShare')[0];
+
+  if (!linkedinBtn) return;
+
+  var pictureString = (squatch.user.facebook.shareImage == "" || squatch.user.facebook.shareImage === null) ? "" : "&picture="+squatch.user.facebook.shareImage;
+  var linkedinUrl = "https://www.linkedin.com/shareArticle?mini=true&url="+squatch.user.facebook.link+"&title="+squatch.user.facebook.title+"&summary="+squatch.user.facebook.summary+pictureString+"&source="+squatch.user.facebook.redirectUrl;
+  linkedinBtn.href = linkedinUrl;
+
+  handleClicks(linkedininBtn, function(e) {
+    // If it's not mobile, don't use href link
+    if (e.type != 'touchstart') {
+      e.preventDefault();
+
+      var url = linkedinUrl + "&display=popup";
+      window.open(url, 'linkedin', 'status=0,width=620,height=400');
+    }
+
+    if (window.frameElement && window.frameElement.squatchJsApi) {
+      window.frameElement.squatchJsApi._shareEvent(window.squatch, 'LINKEDIN');
+    }
+  });
+}
