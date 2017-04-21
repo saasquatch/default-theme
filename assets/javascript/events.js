@@ -176,7 +176,7 @@ function linkedinHandler() {
   var linkedinUrl = "https://www.linkedin.com/shareArticle?mini=true&url="+squatch.user.linkedin.link+"&title="+squatch.user.linkedin.title+"&summary="+squatch.user.linkedin.summary+pictureString+"&source="+squatch.user.linkedin.redirectUrl;
   linkedinBtn.href = linkedinUrl;
 
-  handleClicks(linkedininBtn, function(e) {
+  handleClicks(linkedinBtn, function(e) {
     // If it's not mobile, don't use href link
     if (e.type != 'touchstart') {
       e.preventDefault();
