@@ -47,6 +47,22 @@
 @import 'modes/_hosted.less';
 
 
+@font-face {
+  font-family: BrandonGrotesque;
+  src: url("../fonts/BrandonGrotesque-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SanFranciscoDisplay;
+  font-weight: bold;
+  src: url("../fonts/SanFranciscoDisplay-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SanFranciscoText;
+  src: url("../fonts/SanFranciscoText-Regular.otf") format("opentype");
+}
+
 .squatch-container {
   width: 100%;
   color: @invision-gray;
@@ -70,11 +86,13 @@
     padding-top: 10px;
     padding-bottom: 40px;
     font-size: @font-size-xl;
+    font-family: SanFranciscoDisplay, Helvetica, Arial, sans-serif;
+    font-weight: 400;
   }
 
   .border {
     width: 100%;
-    border-top: 1px solid black;
+    border-top: 1px solid @invision-gray-light;
     margin: 0 auto;
     max-width: 120px;
   }
