@@ -63,6 +63,11 @@
   src: url("../fonts/SanFranciscoText-Regular.otf") format("opentype");
 }
 
+@font-face {
+  font-family: BrandonGrotesque-Medium;
+  src: url("../fonts/BrandonGrotesque-Medium.otf") format("opentype");
+}
+
 .squatch-container {
   width: 100%;
   color: @invision-gray;
@@ -121,6 +126,8 @@
   }
 
   .squatch-share-btn {
+    font-family: BrandonGrotesque-Medium, Helvetica, Arial, sans-serif;
+    font-size: 9px;
     background: #fff;
     border: 1px solid @invision-gray-light;
     border-radius: 20px;
@@ -131,18 +138,23 @@
     font-family: SanFranciscoDisplay, Helvetica, Arial, sans-serif;
     font-size: 28px;
     font-weight: 400;
+    text-align: left;
   }
 
   .squatch-lead {
     font-family: SanFranciscoText, Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
+    color: @invision-gray-dark;
+    text-align: left;
   }
 
   .squatch-cta {
     font-family: BrandonGrotesque, Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    color: @invision-gray-lighter;
+    text-align: left;
   }
 }
 
