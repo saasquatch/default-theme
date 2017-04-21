@@ -172,8 +172,8 @@ function linkedinHandler() {
 
   if (!linkedinBtn) return;
 
-  var pictureString = (squatch.user.facebook.shareImage == "" || squatch.user.facebook.shareImage === null) ? "" : "&picture="+squatch.user.facebook.shareImage;
-  var linkedinUrl = "https://www.linkedin.com/shareArticle?mini=true&url="+squatch.user.facebook.link+"&title="+squatch.user.facebook.title+"&summary="+squatch.user.facebook.summary+pictureString+"&source="+squatch.user.facebook.redirectUrl;
+  var pictureString = (squatch.user.linkedin.shareImage == "" || squatch.user.linkedin.shareImage === null) ? "" : "&picture="+squatch.user.linkedin.shareImage;
+  var linkedinUrl = "https://www.linkedin.com/shareArticle?mini=true&url="+squatch.user.linkedin.link+"&title="+squatch.user.linkedin.title+"&summary="+squatch.user.linkedin.summary+pictureString+"&source="+squatch.user.linkedin.redirectUrl;
   linkedinBtn.href = linkedinUrl;
 
   handleClicks(linkedininBtn, function(e) {

@@ -39,6 +39,18 @@
       appId: '157382547792399',
       redirectUrl: 'http://app.referralsaasquatch.com/widget/close'
     },
+    linkedin: {
+      title: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareSubject')}}',
+      summary: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareBody')}}',
+      link: '{{share-link 'LINKEDIN'}}',
+{{#if variables.widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareImageURL}}
+      shareImage: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareImageURL')}}',
+{{else}}
+      shareImage: null,
+{{/if}}
+      appId: '157382547792399',
+      redirectUrl: 'http://app.referralsaasquatch.com/widget/close'
+    },
     twitter: {
       message: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.TWITTER.twitterShareBody')}}'
     },
