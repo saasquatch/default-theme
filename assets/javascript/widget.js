@@ -58,7 +58,7 @@
           var notification;
 
           var notify = function(clipboardNotification, notificationText) {
-            notification = document.getElementByClass('copy')[0];
+            notification = document.getElementsByClassName('copy')[0];
 
             console.log(notification);
 
