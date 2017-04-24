@@ -60,8 +60,6 @@
           var notify = function(clipboardNotification, notificationText) {
             notification = document.getElementsByClassName('copy')[0];
 
-            console.log(notification);
-
             my_addClass(notification, 'copied');
             setTimeout(function() {
               my_removeClass(notification, 'copied');

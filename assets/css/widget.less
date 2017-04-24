@@ -118,15 +118,26 @@
 
     .left-col {
       float: left;
-      width: 250px;
-      height: 250px;
+      max-width: 279px;
+      height: 272px;
+      width: 40%;
+
+      @media (max-width: 750px) {
+        width: 100%;
+        max-width: 100%;
+      }
     }
 
     .right-col {
       display: inline-block;
       max-width: 545px;
+      width: 60%;
       padding-top: 22px;
       padding-left: 78px;
+
+      @media (max-width: 750px) {
+        width: 100%;
+      }
     }
   }
 
