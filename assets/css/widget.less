@@ -68,6 +68,11 @@
   src: url("../fonts/BrandonGrotesque-Medium.otf") format("opentype");
 }
 
+@font-face {
+  font-family: BrandonGrotesque-Bold;
+  src: url("../fonts/BrandonGrotesque-Bold.otf") format("opentype");
+}
+
 .squatch-container {
   width: 100%;
   color: @invision-gray;
@@ -181,6 +186,7 @@
   }
 
   #squatch-share-link {
+    font-family: BrandonGrotesque-Bold, Helvetica, Arial, sans-serif;
     height: 50px;
     border: 1px solid @invision-gray-lighter;
     box-shadow: none;
@@ -197,6 +203,25 @@
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     border-left: 0;
+    padding-right: 10px;
+  }
+
+  .icon-btn.copy {
+    background: @invision-blue-dark;
+    text-align: center;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    font-size: 9px;
+
+    &:before {
+      background: transparent;
+    }
+
+    .icon {
+      display: none;
+    }
   }
 }
 
