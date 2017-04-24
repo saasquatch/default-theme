@@ -92,6 +92,38 @@
   color: #3b5998;
 }
 
+.share-section {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 38px;
+
+  .left-col {
+    float: left;
+    max-width: 279px;
+    height: 272px;
+    width: 40%;
+
+    @media (max-width: 750px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .right-col {
+    display: inline-block;
+    max-width: 545px;
+    width: 60%;
+    padding-top: 22px;
+    padding-left: 78px;
+
+    @media (max-width: 750px) {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 40px;
+    }
+  }
+}
+
 // EMBED WIDGET
 .squatch-container-embed,
 .squatch-container-demo_embed {
@@ -126,38 +158,6 @@
     border-top: 1px solid @invision-gray-lightest;
     margin: 0 auto;
     max-width: 120px;
-  }
-
-  .share-section {
-    max-width: 950px;
-    margin: 0 auto;
-    padding-top: 38px;
-
-    .left-col {
-      float: left;
-      max-width: 279px;
-      height: 272px;
-      width: 40%;
-
-      @media (max-width: 750px) {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-
-    .right-col {
-      display: inline-block;
-      max-width: 545px;
-      width: 60%;
-      padding-top: 22px;
-      padding-left: 78px;
-
-      @media (max-width: 750px) {
-        width: 100%;
-        padding-left: 0;
-        padding-top: 40px;
-      }
-    }
   }
 
   .t-shirt {
