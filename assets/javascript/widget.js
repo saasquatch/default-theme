@@ -58,12 +58,14 @@
           var notification;
 
           var notify = function(clipboardNotification, notificationText) {
-            notification = document.getElementById(clipboardNotification.slice(1));
-            notification.textContent = notificationText;
-            my_addClass(notification, 'in');
+            notification = document.getElementByClass('copy')[0];
+
+            console.log(notification);
+
+            my_addClass(notification, 'copied');
             setTimeout(function() {
-              my_removeClass(notification, 'in');
-            }, 1400);
+              my_removeClass(notification, 'copied');
+            }, 1000);
           };
 
           var notifySuccess = function(e) {
