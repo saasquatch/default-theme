@@ -136,7 +136,19 @@
                                              "handlebars"
                                           ]
                                        }
-                                    }
+                                    },
+                                    "popupHeading":{
+                                      "type":"string",
+                                      "format":"markdown",
+                                      "title":"Popup Title",
+                                      "default":"GET A FREE T-SHIRT!",
+                                      "options":{
+                                         "input_height":"100px",
+                                         "validate":[
+                                            "handlebars"
+                                         ]
+                                      }
+                                    },
                                  }
                               },
                               {
