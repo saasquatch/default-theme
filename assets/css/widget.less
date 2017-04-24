@@ -92,9 +92,24 @@
   color: #3b5998;
 }
 
+
+// SHARED
 .squatch-container-embed,
 .squatch-container-popup,
 .squatch-container-demo_embed {
+
+  .squatch-cta {
+    font-family: BrandonGrotesque, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: @invision-gray-light;
+    padding-top: 15px;
+    margin-bottom: -3px;
+
+    p {
+      text-align: left;
+    }
+  }
 
   .squatch-share-btn {
     font-family: BrandonGrotesque-Medium, Helvetica, Arial, sans-serif;
@@ -285,19 +300,6 @@
       text-align: left;
     }
   }
-
-  .squatch-cta {
-    font-family: BrandonGrotesque, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: @invision-gray-light;
-    padding-top: 15px;
-    margin-bottom: -3px;
-
-    p {
-      text-align: left;
-    }
-  }
 }
 
 // POPUP WIDGET
@@ -317,5 +319,9 @@
       margin-left: -1px;
       margin-top: 5px;
     }
+  }
+
+  .squatch-share .clearfix{
+    padding-left: 92px;
   }
 }
