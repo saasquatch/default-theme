@@ -224,7 +224,8 @@
 
   border: 0; // remove preview border
 
-  .squatch-popup-title {
+  .squatch-popup-title,
+  .squatch-popup-image {
     display: none;
   }
 
@@ -323,10 +324,18 @@
 
   .squatch-lead {
     font-size: 14px;
+    color: @invision-gray-light;
 
     p {
       text-align: center;
     }
+  }
+
+  .squatch-popup-title {
+    font-family: SanFranciscoDisplay, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    text-align: center;
   }
 
   .squatch-cta {
