@@ -480,13 +480,13 @@ subject: {{variables 'email.REFERRAL_STARTED.configuration.subject'}}
 <!-- /// Begin Email Body Table -->
 <table border="0" cellpadding="0" cellspacing="0" class="max-width-inherit width-100-percent" style="background: #ffffff; max-width: 600px; width: 100%; border: 1px solid #D1D5DF;">
     <tr>
-        <td class="padding-bottom-1000 padding-left-1000 padding-right-1000 padding-top-1000 width-auto" style="padding-bottom: 30px; padding-left: 50px; padding-right: 50px; padding-top: 30px;">
+        <td class="padding-bottom-1000 padding-left-1000 padding-right-1000 padding-top-1000 width-auto" style="padding-bottom: 50px; padding-left: 50px; padding-right: 50px; padding-top: 30px;">
             <table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="max-width: 560px; width: 100%;">
 
                   {{#if (variables 'email.REFERRAL_STARTED.content.headerImageUrl')}}
                     <!-- Friend Face -->
-                    <td align="center" class="width-auto" style="max-width: 70px; width: 100%; padding-bottom: 40px;">
-                        <img src="http://res.cloudinary.com/saasquatch/image/upload/v1493321524/friend-face_ug7gkw.png" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" />
+                    <td align="center" class="width-auto" style="max-width: 70px; width: 100%; padding-bottom: 40px; padding-top: 20px;">
+                        <img src="{{variables 'email.REFERRAL_STARTED.content.headerImageUrl'}}" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" />
                     </td>
                     <!-- Friend Face End -->
                   {{/if}}
