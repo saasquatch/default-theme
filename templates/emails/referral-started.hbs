@@ -3,315 +3,605 @@ from: {{variables 'email.REFERRAL_STARTED.configuration.fromAddress'}}
 fromName: {{variables 'email.REFERRAL_STARTED.configuration.fromName'}}
 subject: {{variables 'email.REFERRAL_STARTED.configuration.subject'}}
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-  <head>
-    <base target="_blank">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Referral SaaSquatch Template</title>
-  </head>
-  <body bgcolor="#ffffff" style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; color: #2d2c2c; text-align: center; background: #ffffff; margin: 0;">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>InVision Referral Email</title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+        /* --- Begin Desktop Reset Styles */
+        a,a:link{text-decoration:none;}
+        body{width:100%!important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin:0;padding:0;}
+        p{margin:0;margin-bottom:0;padding:0;}
+        h1,h2,h3,h4,h5,h6{color:#a8a8a8;line-height:100%;}
+        img{border:0;line-height:100%;outline:none;text-decoration:none;display:block;}
+        table td{border-collapse:collapse;}
+        #outlook a{padding:0;}
+        .ReadMsgBody{width:100%;}
+        .ExternalClass{width:100%;}
+        .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{width:100%;line-height:100%;}
+        /* End Desktop Reset Styles --- */
+        /* --- Begin Editable Desktop Reset Styles */
+        a:visited{text-decoration:none;}
+        a:focus{text-decoration:underline;}
+        a:hover{text-decoration:underline;}
+        body,#body-style{background:#007fb6;color:#a8a8a8;font-family:'Open Sans',Helvetica,sans-serif;font-size:100%;}
+        span.yshortcuts,span.yshortcuts:hover,span.yshortcuts:active,span.yshortcuts:focus{background:transparent;border:none;color:#a8a8a8;}
+        /* End Editable Desktop Reset Styles --- */
 
-  <style type="text/css">
-    @media only screen and (min-width: 481px) {
-        td[class~="header-text"] h1 {
-          font-size: 36px !important;
-          color: #4797d2 !important;
-          text-align: center !important;
-          line-height: 1.5 !important;
-          font-weight: bold !important;
-          margin: 0 !important;
-          font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
-      }
-      td[class~="header-text"] p {
-          font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
-          font-size: 18px !important;
-          color: #121212 !important;
-          font-weight: normal !important;
-      }
-      td p {
-        margin: 0 !important;
-      }
-    }
+        /* --- Begin Responsive Styles */
+        @media
+        only screen and (max-width: 480px) /* Catch-all for Testing and Small Screens */,
+        only screen and (min-device-width: 320px) and (max-device-width: 568px) /* iPhone 5 & 5S in Portrait & Landscape */,
+        only screen and (min-device-width: 375px) and (max-device-width: 667px) /* iPhone 6 in Portrait & Landscape */,
+        only screen and (min-device-width: 414px) and (max-device-width: 736px) /* iPhone 6 Plus in Portrait & Landscape */ {
+            * {
+                -webkit-text-size-adjust: none !important;
+            }
+            body[id="invision"] {
+                background: #ffffff !important;
+                color: #a8a8a8 !important;
+                font-family: 'Open Sans', Helvetica, sans-serif !important;
+                font-size: 100% !important;
+                font-weight: normal !important;
+                height: 100% !important;
+                min-height: 100% !important;
+                min-width: 100% !important;
+                width: 100% !important;
+            }
+            body[id="invision"] #body-style {
+                background: inherit !important;
+                color: inherit !important;
+                font-family: inherit !important;
+                font-size: inherit !important;
+                font-weight: inherit !important;
+                height: inherit !important;
+                min-height: inherit !important;
+                min-width: inherit !important;
+                width: inherit !important;
+            }
 
-    @media only screen and (max-width: 480px) {
-      table[class*="container-for-gmail-android"] {
-        min-width: 320px !important; width: 100% !important;
-      }
-      table[class~="w320"] {
-        width: 320px !important;
-      }
-      td[class~="component"] {
-        padding: 25px !important;
-      }
-      td[class~="social"] {
-        padding: 25px !important;
-      }
-      td[class~="header-text"] {
-        font-size: 30px !important;
-      }
-      td[class~="header-text"] h1 {
-          font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
-          font-size: 30px !important;
-          color: #4797d2 !important;
-          font-weight: bold !important;
-          margin: 0 !important;
-      }
-      td[class~="header-text"] p {
-          font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
-          font-size: 18px !important;
-          color: #121212 !important;
-          font-weight: normal !important;
-      }
-      td[class~="header"] {
-        padding-left: 20px !important; padding-right: 20px !important;
-      }
-      table[class~="link-widget"] {
-        width: 270px !important;
-      }
-      td[class~="mobile-block"] {
-        display: block !important; padding-bottom: 10px !important;
-      }
-      a[class~="social-button"] {
-        width: 270px !important;
-      }
-      span[class~="social-button-text"] {
-        margin-left: -30px !important;
-      }
-      div[class~="hide-desktop"] {
-        max-height: none !important; display: block !important; font-size: 16px !important;
-      }
-      a[class~="hide"] {
-        max-height: 39px !important; font-size: 16px !important; line-height: 39px !important; padding-bottom: 10px !important; position: relative !important; background-image: url(https://res.cloudinary.com/dwde8d8fq/image/upload/v1444557921/social_mobile_17_njfexy.jpg); background-repeat: no-repeat; border-radius: 7px; display: inline-block;
-      }
-      span[class~="mobile-hide"] {
-        max-height: 0 !important; display: none !important; mso-hide: all !important; overflow: hidden !important; font-size: 0 !important;
-      }
-      a[class~="twitter"] {
-        background-image: url({{assets 'images/social_mobile_22.jpg'}}) !important;
-      }
-      a[class~="facebook"] {
-        background-image: url({{assets 'images/social_mobile_20.jpg'}}) !important;
-      }
-      a[class~="email"] {
-        background-image: url({{assets 'images/social_mobile_grey_20.jpg'}}) !important;
-      }
-      td p {
-        margin: 0 !important;
-      }
-    }
-  </style>
-  <table align="center" cellpadding="0" cellspacing="0" class="container-for-gmail-android" width="100%" height="100%" style="border-collapse: collapse !important; min-width: 600px; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-    <!--
-    *
-    * Header Component
-    * -Start-
-    *
-    -->
-    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-      <td align="center" valign="top" width="100%" class="background-colored" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; background: #f2f2f2; border: 1px solid #ececec;" bgcolor="#f2f2f2">
-        <center style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-          <table cellspacing="0" cellpadding="0" width="500" class="w320" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-            <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-              <td class="header component" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 35px 110px;" align="center">
-                <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
+
+
+            /* --- Begin General Styles */
+            body[id="invision"] table.mso{
+                width: auto !important;
+            }
+                body[id="invision"] td.mso {
+                    width: auto !important;
+                }
+            /* End General Styles --- */
+
+
+
+            /* --- Begin Email Container Table */
+            body[id="invision"] #email-container-table {
+                background: #ffffff !important;
+                margin: 0 auto !important;
+                width: 100% !important;
+            }
+            body[id="invision"] #email-container-td {
+                margin: 0 !important;
+                padding: 0 !important;
+                vertical-align: top !important;
+                width: auto !important;
+            }
+            /* End Email Container Table --- */
+
+
+
+            /* --- Begin General Styles */
+            body[id="invision"] .border-bottom-default {
+                border-bottom: 1px solid #e9e9e9 !important;
+            }
+            body[id="invision"] .border-bottom-none {
+                border-bottom: none !important;
+            }
+            body[id="invision"] .display-block {
+                display: block !important;
+            }
+            body[id="invision"] .display-none {
+                display: none !important;
+                height: 0 !important;
+                max-height: 0 !important;
+                max-width: 0 !important;
+                width: 0 !important;
+            }
+            body[id="invision"] .font-size-3000 {
+                font-size: 3em !important;
+            }
+            body[id="invision"] .font-size-2875 {
+                font-size: 2.875em !important;
+            }
+            body[id="invision"] .font-size-2750 {
+                font-size: 2.750em !important;
+            }
+            body[id="invision"] .font-size-2625 {
+                font-size: 2.625em !important;
+            }
+            body[id="invision"] .font-size-2500 {
+                font-size: 2.5em !important;
+            }
+            body[id="invision"] .font-size-2375 {
+                font-size: 2.375em !important;
+            }
+            body[id="invision"] .font-size-2250 {
+                font-size: 2.25em !important;
+            }
+            body[id="invision"] .font-size-2125 {
+                font-size: 2.125em !important;
+            }
+            body[id="invision"] .font-size-2000 {
+                font-size: 2em !important;
+            }
+            body[id="invision"] .font-size-1875 {
+                font-size: 1.875em !important;
+            }
+            body[id="invision"] .font-size-1750 {
+                font-size: 1.75em !important;
+            }
+            body[id="invision"] .font-size-1625 {
+                font-size: 1.625em !important;
+            }
+            body[id="invision"] .font-size-1500 {
+                font-size: 1.5em !important;
+            }
+            body[id="invision"] .font-size-1250 {
+                font-size: 1.25em !important;
+            }
+            body[id="invision"] .font-size-1125 {
+                font-size: 1.125em !important;
+            }
+            body[id="invision"] .font-size-1000 {
+                font-size: 1em !important;
+            }
+            body[id="invision"] .font-size-0875 {
+                font-size: .875em !important;
+            }
+            body[id="invision"] .font-size-0750 {
+                font-size: .75em !important;
+            }
+            body[id="invision"] .font-size-0625 {
+                font-size: .625em !important;
+            }
+            body[id="invision"] .font-size-0500 {
+                font-size: .5em !important;
+            }
+            body[id="invision"] .height-auto {
+                height: auto !important;
+            }
+            body[id="invision"] .line-height-200 {
+                line-height: 200% !important;
+            }
+            body[id="invision"] .line-height-175 {
+                line-height: 175% !important;
+            }
+            body[id="invision"] .line-height-150 {
+                line-height: 150% !important;
+            }
+            body[id="invision"] .line-height-125 {
+                line-height: 125% !important;
+            }
+            body[id="invision"] .line-height-100 {
+                line-height: 100% !important;
+            }
+            body[id="invision"] .line-height-75 {
+                line-height: 75% !important;
+            }
+            body[id="invision"] .line-height-inherit {
+                line-height: inherit !important;
+            }
+            body[id="invision"] .line-height-normal {
+                line-height: normal !important;
+            }
+            body[id="invision"] .margin-left-auto {
+                margin-left: auto !important;
+            }
+            body[id="invision"] .margin-right-auto {
+                margin-right: auto !important;
+            }
+            body[id="invision"] .max-width-inherit {
+                max-width: inherit !important;
+            }
+            body[id="invision"] .padding-none {
+                padding: 0 !important;
+            }
+            body[id="invision"] .padding-bottom-1500 {
+                padding-bottom: 1.5em !important;
+            }
+            body[id="invision"] .padding-bottom-1375 {
+                padding-bottom: 1.375em !important;
+            }
+            body[id="invision"] .padding-bottom-1250 {
+                padding-bottom: 1.25em !important;
+            }
+            body[id="invision"] .padding-bottom-1125 {
+                padding-bottom: 1.125em !important;
+            }
+            body[id="invision"] .padding-bottom-1000 {
+                padding-bottom: 1em !important;
+            }
+            body[id="invision"] .padding-bottom-0875 {
+                padding-bottom: .875em !important;
+            }
+            body[id="invision"] .padding-bottom-0750 {
+                padding-bottom: .75em !important;
+            }
+            body[id="invision"] .padding-bottom-0625 {
+                padding-bottom: .625em !important;
+            }
+            body[id="invision"] .padding-bottom-0500 {
+                padding-bottom: .5em !important;
+            }
+            body[id="invision"] .padding-left-1500 {
+                padding-left: 1.5em !important;
+            }
+            body[id="invision"] .padding-left-1375 {
+                padding-left: 1.375em !important;
+            }
+            body[id="invision"] .padding-left-1250 {
+                padding-left: 1.25em !important;
+            }
+            body[id="invision"] .padding-left-1125 {
+                padding-left: 1.125em !important;
+            }
+            body[id="invision"] .padding-left-1000 {
+                padding-left: 1em !important;
+            }
+            body[id="invision"] .padding-left-0875 {
+                padding-left: .875em !important;
+            }
+            body[id="invision"] .padding-left-0750 {
+                padding-left: .75em !important;
+            }
+            body[id="invision"] .padding-left-0625 {
+                padding-left: .625em !important;
+            }
+            body[id="invision"] .padding-left-0500 {
+                padding-left: .5em !important;
+            }
+            body[id="invision"] .padding-right-1500 {
+                padding-right: 1.5em !important;
+            }
+            body[id="invision"] .padding-right-1375 {
+                padding-right: 1.375em !important;
+            }
+            body[id="invision"] .padding-right-1250 {
+                padding-right: 1.25em !important;
+            }
+            body[id="invision"] .padding-right-1125 {
+                padding-right: 1.125em !important;
+            }
+            body[id="invision"] .padding-right-1000 {
+                padding-right: 1em !important;
+            }
+            body[id="invision"] .padding-right-0875 {
+                padding-right: .875em !important;
+            }
+            body[id="invision"] .padding-right-0750 {
+                padding-right: .75em !important;
+            }
+            body[id="invision"] .padding-right-0625 {
+                padding-right: .625em !important;
+            }
+            body[id="invision"] .padding-right-0500 {
+                padding-right: .5em !important;
+            }
+            body[id="invision"] .padding-top-1500 {
+                padding-top: 1.5em !important;
+            }
+            body[id="invision"] .padding-top-1375 {
+                padding-top: 1.375em !important;
+            }
+            body[id="invision"] .padding-top-1250 {
+                padding-top: 1.25em !important;
+            }
+            body[id="invision"] .padding-top-1125 {
+                padding-top: 1.125em !important;
+            }
+            body[id="invision"] .padding-top-1000 {
+                padding-top: 1em !important;
+            }
+            body[id="invision"] .padding-top-0875 {
+                padding-top: .875em !important;
+            }
+            body[id="invision"] .padding-top-0750 {
+                padding-top: .75em !important;
+            }
+            body[id="invision"] .padding-top-0625 {
+                padding-top: .625em !important;
+            }
+            body[id="invision"] .padding-top-0500 {
+                padding-top: .5em !important;
+            }
+            body[id="invision"] .text-align-center {
+                text-align: center !important;
+            }
+            body[id="invision"] .text-align-left {
+                text-align: left !important;
+            }
+            body[id="invision"] .text-align-right {
+                text-align: right !important;
+            }
+            body[id="invision"] .vertical-align-bottom {
+                vertical-align: bottom !important;
+            }
+            body[id="invision"] .vertical-align-middle {
+                vertical-align: middle !important;
+            }
+            body[id="invision"] .vertical-align-top {
+                vertical-align: top !important;
+            }
+            body[id="invision"] .width-100-percent {
+                width: 100% !important;
+            }
+            body[id="invision"] .width-95-percent {
+                width: 95% !important;
+            }
+            body[id="invision"] .width-90-percent {
+                width: 90% !important;
+            }
+            body[id="invision"] .width-85-percent {
+                width: 85% !important;
+            }
+            body[id="invision"] .width-80-percent {
+                width: 80% !important;
+            }
+            body[id="invision"] .width-75-percent {
+                width: 75% !important;
+            }
+            body[id="invision"] .width-70-percent {
+                width: 70% !important;
+            }
+            body[id="invision"] .width-65-percent {
+                width: 65% !important;
+            }
+            body[id="invision"] .width-60-percent {
+                width: 60% !important;
+            }
+            body[id="invision"] .width-55-percent {
+                width: 55% !important;
+            }
+            body[id="invision"] .width-50-percent {
+                width: 50% !important;
+            }
+            body[id="invision"] .width-45-percent {
+                width: 45% !important;
+            }
+            body[id="invision"] .width-40-percent {
+                width: 40% !important;
+            }
+            body[id="invision"] .width-35-percent {
+                width: 35% !important;
+            }
+            body[id="invision"] .width-30-percent {
+                width: 30% !important;
+            }
+            body[id="invision"] .width-25-percent {
+                width: 25% !important;
+            }
+            body[id="invision"] .width-20-percent {
+                width: 20% !important;
+            }
+            body[id="invision"] .width-15-percent {
+                width: 15% !important;
+            }
+            body[id="invision"] .width-10-percent {
+                width: 10% !important;
+            }
+            body[id="invision"] .width-5-percent {
+                width: 5% !important;
+            }
+            body[id="invision"] .width-50-pixels {
+                width: 50px !important;
+            }
+            body[id="invision"] .width-40-pixels {
+                width: 40px !important;
+            }
+            body[id="invision"] .width-30-pixels {
+                width: 30px !important;
+            }
+            body[id="invision"] .width-20-pixels {
+                width: 20px !important;
+            }
+            body[id="invision"] .width-10-pixels {
+                width: 10px !important;
+            }
+            body[id="invision"] .width-auto {
+                width: auto !important;
+            }
+            /* End General Styles --- */
+
+
+
+        }
+        /* End Responsive Styles --- */
+    </style>
+</head>
+<body id="invision" style="background: #ffffff; color: #a8a8a8; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 100%;">
+<!-- /// Begin Email Wrapper Div -->
+<div id="body-style">
+
+<!-- /// Begin Email Container Table -->
+<table border="0" cellpadding="0" cellspacing="0" id="email-container-table" style="background: #ffffff; width: 100%;"><tr><td align="center" valign="top" id="email-container-td" style="margin-bottom: 0; margin-left: auto; margin-right: auto; margin-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; vertical-align: top; width: 100%;">
+
+
+
+<!-- /// Begin Email Preheader -->
+<div style="color: #ffffff !important; display: none !important; font-size: 0 !important; height: 0 !important; max-height: 0 !important; max-width: 0 !important; width: 0 !important; mso-hide: all;"><span style="color: #ffffff !important; display: none !important; font-size: 0 !important; height: 0 !important; max-height: 0 !important; max-width: 0 !important; width: 0 !important; mso-hide: all;">InVision preheader here.</span></div>
+<!-- End Email Preheader \\\ -->
+
+
+
+<!--[if (gte mso 9)|(IE)]>
+<table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" width="600">
+    <tr>
+        <td class="width-auto" style="width: auto;">
+<![endif]-->
+<!-- /// Begin Email Header Table -->
+<table border="0" cellpadding="0" cellspacing="0" class="max-width-inherit width-100-percent" style="max-width: 600px; width: 100%;">
+    <tr>
+        <td align="center" valign="middle" class="padding-bottom-1000 padding-top-1000 width-auto" style="padding-bottom: 30px; padding-top: 30px;">
+
+
+
+            <!-- ||| Begin: Logo -->
+            <table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="width: auto;">
+                <tr>
+                    <td class="width-auto" style="max-width: 30px; width: 100%;">
+                        <a href="#" target="_blank" title="InVision" style="text-decoration: none;">
+                            <img src="http://res.cloudinary.com/saasquatch/image/upload/v1493228633/invision-logo_npluj3.png" alt="Invision" width="30" height="25" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 25px; max-width: 30px; text-align: left; vertical-align: top;" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+            <!-- End: Logo ||| -->
+
+
+
+        </td>
+    </tr>
+</table>
+<!-- End Email Header Table \\\ -->
+<!--[if (gte mso 9)|(IE)]>
+        </td>
+    </tr>
+</table>
+<![endif]-->
+
+
+
+<!--[if (gte mso 9)|(IE)]>
+<table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" width="600">
+    <tr>
+        <td class="width-auto" style="width: auto;">
+<![endif]-->
+<!-- /// Begin Email Body Table -->
+<table border="0" cellpadding="0" cellspacing="0" class="max-width-inherit width-100-percent" style="background: #ffffff; max-width: 600px; width: 100%; border: 1px solid #D1D5DF;">
+    <tr>
+        <td class="padding-bottom-1000 padding-left-1000 padding-right-1000 padding-top-1000 width-auto" style="padding-bottom: 30px; padding-left: 50px; padding-right: 50px; padding-top: 30px;">
+            <table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="max-width: 560px; width: 100%;">
+
                   {{#if (variables 'email.REFERRAL_STARTED.content.headerImageUrl')}}
                     <!-- Friend Face -->
-                    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                      <td class="friend-face" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 10px 0;" align="center">
-                        <img width="117" height="112" src="{{variables 'email.REFERRAL_STARTED.content.headerImageUrl'}}" alt="friend pic" style="max-width: 600px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;" />
-                      </td>
-                    </tr>
+                    <td align="center" class="width-auto" style="max-width: 70px; width: 100%; padding-bottom: 40px;">
+                        <img src="http://res.cloudinary.com/saasquatch/image/upload/v1493321524/friend-face_ug7gkw.png" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 210px; max-width: 215px; text-align: center; vertical-align: top;" />
+                    </td>
                     <!-- Friend Face End -->
                   {{/if}}
-                    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                      <td class="header-text" align="center">
-                        {{variables 'email.REFERRAL_STARTED.content.headerContent'}}
-                      </td>
+                    <tr>
+                        <td class="font-size-1500 line-height-normal" style="color: #434C5E; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 20px; font-weight: 400; text-align: center; padding-bottom: 10px;">
+                            {{variables 'email.REFERRAL_STARTED.content.headerContent'}}
+                        </td>
                     </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </center>
-      </td>
-    </tr>
-    <!--
-    *
-    * Header Component
-    * -End-
-    *
-    -->
 
-    <!--
-    *
-    * Content Component
-    * -Start-
-    *
-    -->
-    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-      <td align="center" valign="top" width="100%" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; border-bottom-width: 1px; border-bottom-color: #e6e6e6; border-bottom-style: solid; background: #ffffff;" class="border-bottom" bgcolor="#ffffff">
-        <center style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-          <table cellspacing="0" cellpadding="0" width="500" class="w320" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-            <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-              <td class="content component" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 35px;" align="center">
-                <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                  <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                    <td class="content-body" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5;" align="center">
-                      {{variables 'email.REFERRAL_STARTED.content.bodyContent'}}
-                    </td>
-                  </tr>
-                  <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                    <td class="content-code" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 25px 0;" align="center">
-                      {{variables 'email.REFERRAL_STARTED.content.shareCTA'}}
-                    </td>
-                  </tr>
-                  {{#if variables.email.REFERRAL_STARTED.content.hasShareLink}}
-                    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                      <td style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5;" align="center">
-                        <center style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                          <table cellspacing="0" cellpadding="0" class="link-widget" style="border-collapse: separate !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; width: 260px; margin: 0 auto;">
-                            <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                              <td class="link-content accent-text background-colored" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #4797d2 !important; text-align: center; line-height: 1.5; border-radius: 7px; font-weight: bold; text-decoration: none !important; background: #f2f2f2; padding: 13px 0; border: 1px solid #ececec;" align="center" bgcolor="#f2f2f2">
-                                <p>{{shareLinks.shareLink}}</p>
+                    <tr>
+                        <td class="font-size-1000 line-height-normal" style="color: #596377; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 14px; font-weight: normal; text-align: center; line-height: 1.7;">
+                            {{variables 'email.REFERRAL_STARTED.content.bodyContent'}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="line-height-150" style="color: #596377; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 14px; line-height: 24px; padding-top: 20px; text-align: center; letter-spacing: 0.3px;">
+                            {{variables 'email.REFERRAL_STARTED.content.shareCTA'}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td style="color: #434C5E; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 18px; line-height: 24px; text-align: center; padding-top: 20px;">
+                          <a href="http://ssqt.ch/XU892Z89" class="padding-right-0875 padding-left-0875" style="background-color: #F9F9FB; color: #434C5E; padding: 71px; font-size: 16px; padding-top: 15px; padding-bottom: 15px; border: 1px solid #E3E3E3;">http://ssqt.ch/XU892Z89</a>
+                      </td>
+
+                    </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End Email Body Table \\\ -->
+<!--[if (gte mso 9)|(IE)]>
+        </td>
+    </tr>
+</table>
+<![endif]-->
+
+
+
+<!--[if (gte mso 9)|(IE)]>
+<table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" width="600">
+    <tr>
+        <td class="width-auto" style="width: auto;">
+<![endif]-->
+<!-- /// Begin Email Footer Table -->
+<table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="max-width: 600px; width: 100%;">
+    <tr>
+        <td align="center" valign="middle" class="padding-bottom-1500 padding-top-1500 width-auto" style="padding-bottom: 30px; padding-top: 30px;">
+
+
+
+            <!-- ||| Begin Module: Legalese -->
+            <table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="width: auto;">
+              <tr>
+                  <td class="font-size-0750 line-height-75 padding-bottom-0750" style="color: #596377; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 12px; line-height: 18px; letter-spacing: 0.3px; padding-bottom: 12px; text-align: center;">
+                      <span class="display-block">
+                        Trouble with the link above? Copy and paste the following in your browser <a href="https://marketplace.invisionapp.com" style="color: #1E8FE1;">https://marketplace.invisionapp.com</a>
+                      </span>
+                      <br />
+                  </td>
+              </tr>
+                <tr>
+                  <td align="center" valign="middle" class="padding-bottom-1000 padding-top-1000 width-auto" style="padding-bottom: 20px; padding-top: 10px;">
+
+
+
+                      <!-- ||| Begin: Logo -->
+                      <table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="width: auto;">
+                          <tr>
+                              <td class="width-auto" style="max-width: 28px; width: 100%;">
+                                  <img src="http://res.cloudinary.com/saasquatch/image/upload/v1493228634/invision-logo-coloured_lg4nwg.png" alt="Invision" width="28" height="28" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 28px; max-width: 28px; text-align: left; vertical-align: top;" />
                               </td>
-                            </tr>
-                          </table>
-                        </center>
-                      </td>
-                    </tr>
-                  {{/if}}
-                </table>
-              </td>
-            </tr>
-          </table>
-        </center>
-      </td>
-    </tr>
-    <!--
-    *
-    * Content Component
-    * -End-
-    *
-    -->
+                          </tr>
+                      </table>
+                      <!-- End: Logo ||| -->
 
-    <!--
-    *
-    * Social Links Component
-    * -Start-
-    *
-    -->
-    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-      <td align="center" valign="top" width="100%" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; background: #ffffff;" bgcolor="#ffffff">
-        <center style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-          <table cellspacing="0" cellpadding="0" width="500" class="w320" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-            <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-              <td class="social component" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; padding: 35px 22px;" align="center">
-                <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                  <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                    <td class="sub-header" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 18px; color: #121212; text-align: center; line-height: 1.5;" align="center">
-                      {{variables 'email.REFERRAL_STARTED.content.shareButtonHeader'}}
+
+
+                  </td>
+                </tr>
+                <tr>
+                    <td class="font-size-0750 line-height-75 padding-bottom-0750" style="color: #596377; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 12px; line-height: 18px; letter-spacing: 0.3px; padding-bottom: 12px; text-align: center;">
+                        <span class="display-block">
+                          DESIGN BETTER EXPERIENCES FOR WEB & MOBILE
+                        </span>
+                        <br />
+                        <span class="display-block">
+                            InVision is a Prototyping, Collaboration and Worflow Platform
+                        </span>
                     </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </center>
-      </td>
-    </tr>
+                </tr>
+            </table>
+            <!-- End Module: Legalese ||| -->
 
-    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-      <td align="center" valign="top" width="100%" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; background: #ffffff;" bgcolor="#ffffff">
-        <center style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-          <table cellpadding="0" width="500" class="w320" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-            <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-              <td class="mobile-block" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5;" align="center">
-                <div style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                    <!--[if mso]>
-                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://twitter.com/intent/tweet?source=webclient&text={{urlencode (variables 'shareMessaging.twitterShareBody')}}" style="height:39px;v-text-anchor:middle;width:136px;" arcsize="18%" stroke="f" fill="t">
-                      <v:fill type="tile" src="{{assets 'images/social_07.jpg'}}" color="#0089b6" />
-                      <w:anchorlock/>
-                      <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tweet</center>
-                    </v:roundrect>
-                    <![endif]-->
-                  <a class="social-button twitter" href="https://twitter.com/intent/tweet?source=webclient&text={{urlencode (variables 'shareMessaging.twitterShareBody')}}" style="border-radius: 7px; font-family: HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF; display: inline-block; text-align: center; text-decoration: none; mso-hide: all; background: #0089B7; padding: 0; min-width: 136px;" target="_blank">
-                    <img src="{{assets 'images/twitter.jpg'}}" style="float: left; margin: 0; padding: 0;">
-                    <span class="social-button-text" style="margin: 0; padding: 0; margin-top: 7px; margin-left: -10px; display: inline-block; min-width: 93px; max-height: 39px;">Tweet</span>
-                  </a>
-                </div>
-              </td>
-              <td class="mobile-block" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5;" align="center">
-                <div style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                  <!--[if mso]>
-                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.facebook.com/dialog/feed?app_id=157382547792399&link={{shareLinks.facebookShareLink}}&name={{urlencode (variables 'shareMessaging.facebookShareSubject')}}&description={{urlencode (variables 'shareMessaging.facebookShareBody')}}&redirect_uri=https://www.facebook.com" style="height:39px;v-text-anchor:middle;width:136px;" arcsize="18%" stroke="f" fill="t">
-                    <v:fill type="tile" src="{{assets 'images/social_09.jpg'}}" color="#234079" />
-                    <w:anchorlock/>
-                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share</center>
-                  </v:roundrect>
-                  <![endif]-->
-                  <a class="social-button facebook" href="https://www.facebook.com/dialog/feed?app_id=157382547792399&link={{shareLinks.facebookShareLink}}&name={{urlencode (variables 'shareMessaging.facebookShareSubject')}}&description={{urlencode (variables 'shareMessaging.facebookShareBody')}}&redirect_uri=https://www.facebook.com" style="border-radius: 7px; font-family: HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF; display: inline-block; text-align: center; text-decoration: none; mso-hide: all; background: #234078; padding: 0; min-width: 136px;" target="_blank">
-                    <img src="{{assets 'images/facebook.jpg'}}" style="float: left; margin: 0; padding: 0;">
-                    <span class="social-button-text" style="margin: 0; padding: 0; margin-top: 7px; margin-left: -10px; display: inline-block; min-width: 93px; max-height: 39px;">Share</span>
-                  </a>
-                </div>
-              </td>
-              <td class="mobile-block" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5;" align="center">
-                <div style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-                  <!--[if mso]>
-                  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="mailto:?subject={{urlencode (variables 'shareMessaging.emailShareSubject') space="%20"}}&body={{urlencode (variables 'shareMessaging.emailShareBody') space="%20"}}" style="height:39px;v-text-anchor:middle;width:136px;" arcsize="18%" stroke="f" fill="t">
-                    <v:fill type="tile" src="{{assets 'images/social_11.jpg'}}" color="#40494e" />
-                    <w:anchorlock/>
-                    <center style="color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</center>
-                  </v:roundrect>
-                  <![endif]-->
-                  <a class="social-button email" href="mailto:?subject={{urlencode (variables 'shareMessaging.emailShareSubject') space="%20"}}&body={{urlencode (variables 'shareMessaging.emailShareBody') space="%20"}}"
-                  style="border-radius: 7px; font-family: HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF; display: inline-block; text-align: center; text-decoration: none; mso-hide: all; background: #40494E; padding: 0; min-width: 136px;" target="_blank">
-                    <img src="{{assets 'images/email.jpg'}}" style="float: left; margin: 0; padding: 0;">
-                    <span class="social-button-text" style="margin: 0; padding: 0; margin-top: 7px; margin-left: -10px; display: inline-block; min-width: 93px; max-height: 39px;">Email</span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-          </table>
-        </center>
-      </td>
-    </tr>
-    <!--
-    *
-    * Social Links Component
-    * -End-
-    *
-    -->
 
-    <!--
-    *
-    * Footer Component
-    * -Start-
-    *
-    -->
-    <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-      <td align="center" valign="top" width="100%" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 16px; color: #2d2c2c; text-align: center; line-height: 1.5; background: #ffffff;" bgcolor="#ffffff">
-        <center style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-          <table cellspacing="0" cellpadding="0" width="500" class="w320" style="border-collapse: collapse !important; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-            <tr style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;">
-              <td class="footer component" style="border-collapse: collapse; font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; font-size: 14px !important; color: #acacac !important; text-align: center; line-height: 1.5; text-decoration: none; padding: 35px 35px 20px;" align="center">
-                {{variables 'email.REFERRAL_STARTED.content.footer'}}
-                Powered by <a href="http://www.referralsaasquatch.com/" style="font-family: 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important; color: #acacac !important; font-size: 14px !important; text-decoration: none; padding-bottom: 20px;">Referral SaaSquatch</a>
-              </td>
-            </tr>
-          </table>
-        </center>
-      </td>
-    </tr>
-    <!--
-    *
-    * Footer Component
-    * -End-
-    *
-    -->
 
-  </table>
-  </body>
+        </td>
+    </tr>
+</table>
+<!-- End Email Footer Table \\\ -->
+<!--[if (gte mso 9)|(IE)]>
+        </td>
+    </tr>
+</table>
+<![endif]-->
+
+
+
+</td></tr></table>
+<!-- End Email Container Table \\\ -->
+
+
+
+</div>
+<!-- End Email Wrapper Div \\\ -->
+</body>
 </html>
