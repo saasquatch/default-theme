@@ -100,6 +100,12 @@
 .squatch-container-mobile,
 .squatch-container-demo_embed {
 
+  .squatch-body {
+    @media (max-width: @screen-sm-max) {
+      padding: 30px;
+    }
+  }
+
   .squatch-cta {
     font-family: BrandonGrotesque, Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -121,6 +127,11 @@
 
     p {
       text-align: left;
+    }
+
+    @media (max-width: @screen-sm-max) {
+      border: 0;
+      padding-top: 0;
     }
   }
 
