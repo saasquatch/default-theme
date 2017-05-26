@@ -506,18 +506,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                         </td>
                     </tr>
 
-                    <tr>
-                        <td style="color: #434C5E; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 18px; line-height: 24px; text-align: center; padding-top: 20px; padding-bottom: 40px;">
-                            <span class="padding-right-0875 padding-left-0875" style="background-color: #F9F9FB; color: #434C5E; padding: 71px; font-size: 16px; padding-top: 15px; padding-bottom: 15px; border: 1px solid #E3E3E3; text-decoration: none; letter-spacing: 3px;">{{api method="GET" path="/customcode/allocate/MAILOUT" output=true outputPath="code"}}</span>
-                        </td>
-
-                    </tr>
-
-                    <tr>
-                        <td style="color: #434C5E; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 18px; line-height: 24px; text-align: center; padding-top: 20px; padding-bottom: 20px;">
-                            <a href="http://ssqt.ch/XU892Z89" style="background-color: #FF3366; color: #ffffff; padding: 50px; font-size: 13px; padding-top: 13px; padding-bottom: 13px; border: 0; border-radius: 50px; text-decoration: none;">GET YOUR SHIRT!</a>
-                        </td>
-                    </tr>
+                    {{> referral-converted-code code=(api method="GET" path="/customcode/allocate/MAILOUT" output=true outputPath="code")}}
             </table>
         </td>
     </tr>
