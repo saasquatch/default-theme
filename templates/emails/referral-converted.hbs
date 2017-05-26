@@ -506,7 +506,7 @@ subject: {{variables 'email.REFERRAL_CONVERTED.configuration.subject'}}
                         </td>
                     </tr>
 
-                    {{> referral-converted-code code=(api method="GET" path="/customcode/allocate/MAILOUT" output=true outputPath="code")}}
+                    {{> emails/referral-converted-code code=(api method="GET" path="/customcode/allocate/MAILOUT" output=true outputPath="code")}}
             </table>
         </td>
     </tr>
