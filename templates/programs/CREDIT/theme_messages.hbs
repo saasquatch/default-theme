@@ -30,7 +30,7 @@
     facebook: {
       title: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareSubject')}}',
       summary: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareBody')}}',
-      link: '{{shareLinks.facebookShareLink}}',
+      link: '{{share-link 'FACEBOOK'}}',
 {{#if variables.widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareImageURL}}
       shareImage: '{{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareImageURL')}}',
 {{else}}

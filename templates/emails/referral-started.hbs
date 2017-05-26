@@ -528,13 +528,13 @@ subject: {{variables 'email.REFERRAL_STARTED.configuration.subject'}}
                           </tr>
                           <tr>
                             <td width="40" height="40" align="center" class="facebook-share" style="border: 1px solid #E4E7ED; border-radius: 20px;">
-                              <a href="https://www.facebook.com/dialog/feed?app_id=157382547792399&link={{user.facebook.link}}&name={{user.facebook.title}}&description={{user.facebook.summary}}&redirect_uri=https://www.facebook.com" style="text-decoration:none;" target="_blank">
+                              <a href="https://www.facebook.com/dialog/feed?app_id=157382547792399&link={{share-link 'FACEBOOK'}}&name={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareSubject')}}&description={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.FACEBOOK.facebookShareBody')}}&redirect_uri=https://www.facebook.com" style="text-decoration:none;" target="_blank">
                                 <img src="http://res.cloudinary.com/saasquatch/image/upload/v1493246440/facebook_iojcs0.png" width="15" height="15" alt="facebook" title="facebook" border="0" style="display:block;" />
                               </a>
                             </td>
                             <td width="20" height="40"></td>
                             <td  width="40" height="40" align="center" class="linkedin-share" style="border: 1px solid #E4E7ED; border-radius: 20px;">
-                              <a href="https://www.linkedin.com/shareArticle?mini=true&url={{user.linkedin.link}}&title={{user.linkedin.title}}&summary={{user.linkedin.summary}}&source={{user.linkedin.redirectUrl}}"style="text-decoration:none;" target="_blank">
+                              <a href="https://www.linkedin.com/shareArticle?mini=true&url={{share-link 'LINKEDIN'}}&title={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareSubject')}}&summary={{urlencode (variables 'widget.REFERRER_WIDGET.content.sharingOptions.LINKEDIN.linkedinShareBody')}}&source=http://app.referralsaasquatch.com/widget/close"style="text-decoration:none;" target="_blank">
                                 <img src="http://res.cloudinary.com/saasquatch/image/upload/v1493246441/linkedin_hpju6b.png" width="15" height="15" alt="linkedin" title="linkedin" border="0" style="display:block;" />
                               </a>
                             </td>
