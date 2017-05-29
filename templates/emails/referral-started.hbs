@@ -483,12 +483,22 @@ subject: {{variables 'email.REFERRAL_STARTED.configuration.subject'}}
         <td class="padding-bottom-1000 padding-left-1000 padding-right-1000 padding-top-1000 width-auto" style="padding-bottom: 50px; padding-left: 50px; padding-right: 50px; padding-top: 30px;">
             <table border="0" cellpadding="0" cellspacing="0" class="width-100-percent" style="max-width: 560px; width: 100%;">
 
-                  {{#if (variables 'email.REFERRAL_STARTED.content.headerImageUrl')}}
+
+                  {{#if newReferral.referredUser.imageUrl}}
                     <!-- Friend Face -->
                     <td align="center" class="width-auto" style="max-width: 70px; width: 100%; padding-bottom: 40px; padding-top: 20px;">
-                        <img src="{{variables 'email.REFERRAL_STARTED.content.headerImageUrl'}}" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" />
+                        <img src="{{newReferral.referredUser.imageUrl}}" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" />
                     </td>
                     <!-- Friend Face End -->
+                  {{else}}
+
+                    {{#if (variables 'email.REFERRAL_STARTED.content.headerImageUrl')}}
+                      <!-- Friend Face -->
+                      <td align="center" class="width-auto" style="max-width: 70px; width: 100%; padding-bottom: 40px; padding-top: 20px;">
+                          <img src="{{variables 'email.REFERRAL_STARTED.content.headerImageUrl'}}" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" />
+                      </td>
+                      <!-- Friend Face End -->
+                    {{/if}}
                   {{/if}}
                     <tr>
                         <td class="font-size-1500 line-height-normal" style="color: #434C5E; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 20px; font-weight: 400; text-align: center; padding-bottom: 10px;">
@@ -510,7 +520,7 @@ subject: {{variables 'email.REFERRAL_STARTED.configuration.subject'}}
 
                     <tr>
                       <td style="color: #434C5E; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 18px; line-height: 24px; text-align: center; padding-top: 20px; padding-bottom: 20px;">
-                          <a href="{{shareLinks.shareLink}}" class="padding-right-0875 padding-left-0875" style="background-color: #F9F9FB; color: #434C5E; padding: 71px; font-size: 16px; padding-top: 15px; padding-bottom: 15px; border: 1px solid #E3E3E3;">{{shareLinks.shareLink}}</a>
+                          <a href="{{shareLinks.shareLink}}" class="padding-right-0875 padding-left-0875" style="background-color: #F9F9FB; color: #434C5E; padding: 71px; font-size: 16px; padding-top: 15px; padding-bottom: 15px; border: 1px solid #E3E3E3; pointer-events: none; cursor: default;">{{shareLinks.shareLink}}</a>
                       </td>
 
                     </tr>
