@@ -495,7 +495,7 @@ subject: {{variables 'email.REFERRAL_STARTED.configuration.subject'}}
                     {{#if (variables 'email.REFERRAL_STARTED.content.headerImageUrl')}}
                       <!-- Friend Face -->
                       <td align="center" class="width-auto" style="max-width: 70px; width: 100%; padding-bottom: 40px; padding-top: 20px;">
-                          <img src={{gravatar newReferral.referredUser.email default="https://d2rcp9ak152ke1.cloudfront.net/theme/test_aa9f50ao3h6cn/assets/sshYd3yI/images/email/referral-started-header.png" rating='pg' size=40 secure=isSecureUrl}} alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" name="{{variables 'email.REFERRAL_STARTED.content.headerImageUrl'}}"/>
+                          <img src="{{gravatar newReferral.referredUser.email default=(variables 'email.REFERRAL_STARTED.content.headerImageUrl') rating='pg' size=40 secure=isSecureUrl}}" alt="Friend Face" width="70" height="70" class="font-size-1000 height-auto margin-left-auto margin-right-auto width-100-percent" style="border: none; color: #ffffff; display: block; font-family: 'Open Sans', Helvetica, sans-serif; font-size: 16px; display: block; max-height: 70px; max-width: 70px; text-align: center; vertical-align: top;" name="{{variables 'email.REFERRAL_STARTED.content.headerImageUrl'}}"/>
                       </td>
                       <!-- Friend Face End -->
                     {{/if}}
