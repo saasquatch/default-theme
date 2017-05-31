@@ -131,9 +131,6 @@
                                     "heading":{
                                        "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
                                     },
-                                    "headerDetails":{
-                                       "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true}} credit off {{companyName}} and receive {{format-reward 'REFERRER' includeUnit=true}} for yourself when they pay their first bill."
-                                    },
                                     "shareCodeDetails":{
                                        "type":"string",
                                        "format":"markdown",
@@ -230,12 +227,6 @@
                                     },
                                     "heading":{
                                        "default":"You were Successfully Referred to {{companyName}}"
-                                    },
-                                    "headerDetails":{
-                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.referralCode}}</span><br>at checkout to receive your referral discount"
-                                    },
-                                    "headerDetailsFuelTank":{
-                                       "default":"Use the Referral Code<br><span id=\"squatch-share-code\">{{referredBy.referredReward.fuelTankCode}}</span><br>at checkout to receive your referral discount"
                                     },
                                     "buttonCopy":{
                                        "type":"string",
@@ -473,30 +464,6 @@
                            "minLength":1,
                            "format":"markdown",
                            "title":"Heading Text:",
-                           "options":{
-                              "input_height":"100px",
-                              "validate":[
-                                 "handlebars"
-                              ]
-                           }
-                        },
-                        "headerDetails":{
-                           "type":"string",
-                           "minLength":1,
-                           "format":"markdown",
-                           "title":"Body Text:",
-                           "options":{
-                              "input_height":"100px",
-                              "validate":[
-                                 "handlebars"
-                              ]
-                           }
-                        },
-                        "headerDetailsFuelTank":{
-                           "type":"string",
-                           "minLength":1,
-                           "format":"markdown",
-                           "title":"FuelTank Body Text:",
                            "options":{
                               "input_height":"100px",
                               "validate":[
