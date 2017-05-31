@@ -37,8 +37,7 @@
         <!-- LAYOUT GOES HERE -->
         <div class="squatch-row">
           {{#each layoutComponents}}
-            {{lookup . 'name'}}
-            {{lookup . 'columns'}}
+            {{lookup . .}}
           {{/each}}
         </div>
 
