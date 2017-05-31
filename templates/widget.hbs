@@ -42,26 +42,32 @@
   <body>
     <main class="squatch-container squatch-container-{{lower mode}}">
       <div class="squatch-body">
-        {{> title}}
+        <!-- LAYOUT GOES HERE -->
+        {{#each layoutComponents}}
+          {{lookup . 'name'}}
+          {{lookup . 'columns'}}
+        {{/each}}
 
-        <button class="close squatch-header-close" data-close-panel="#squatch-panel">Close</button>
 
-        {{> lead}}
-        {{> cta}}
-        {{> share}}
-      </div>
 
-      {{#if user.email}}
-        <div id="squatch-panel">
-          {{> panel_summary}}
-          {{> referrals}}
-          {{> attribution}}
+        <div class="squatch-row">
+          {{!-- {{#if (math component.columns '== 1')}} --}}
+            <!-- <div class="squatch-col-4">
+              {{> (stringFormat 'components/%s.hbs' component.name) component=component}}
+            </div> -->
+          {{!--{{else}} --}}
+            <!-- <div class="squatch-col-2">
+              {{> (stringFormat 'components/%s.hbs' component[0].name) component=component}}
+            </div>
+
+            <div class="squatch-col-2">
+              {{> (stringFormat 'components/%s.hbs' component[1].name) component=component}}
+            </div> -->
+          {{!-- {{/if}} --}}
         </div>
 
-        {{> actions}}
-      {{else}}
-        {{> form}}
-      {{/if}}
+
+      </div>
     </main>
 
     <div id="cta">

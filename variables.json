@@ -103,6 +103,25 @@
                               {
                                  "title":"Customize Referral Widget",
                                  "properties":{
+                                    "layoutComponents":{
+                                      "title":"Widget Layout",
+                                      "type":"array",
+                                      "items":{
+                                         "type":"object",
+                                         "properties":{
+                                            "name":{
+                                               "type":"string",
+                                               "title":"Component Name",
+                                               "default":"text"
+                                            },
+                                            "columns":{
+                                               "type":"number",
+                                               "title":"Number of columns",
+                                               "default":1
+                                            }
+                                         }
+                                      }
+                                    },
                                     "widgetFont":{
                                        "default":"\"Helvetica Neue\",Helvetica,Arial,sans-serif"
                                     },
