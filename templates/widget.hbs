@@ -36,9 +36,8 @@
       <div class="squatch-body">
         <!-- LAYOUT GOES HERE -->
         <div class="squatch-row">
-          {{#each (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutComponents.items')}}
-            {{lookup . .}} <br>
-            {{lookup . 'name'}} <br><br><br>
+          {{#each (variables 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutComponents')}}
+            {{lookup . .}}
           {{/each}}
         </div>
 
