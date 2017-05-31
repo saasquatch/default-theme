@@ -124,9 +124,6 @@
                                     },
                                     "widgetFont":{
                                        "default":"\"Helvetica Neue\",Helvetica,Arial,sans-serif"
-                                    },
-                                    "heading":{
-                                       "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
                                     }
                                  }
                               },
@@ -194,9 +191,6 @@
                                     },
                                     "widgetFont":{
                                        "default":"\"Helvetica Neue\",Helvetica,Arial,sans-serif"
-                                    },
-                                    "heading":{
-                                       "default":"You were Successfully Referred to {{companyName}}"
                                     },
                                     "buttonCopy":{
                                        "type":"string",
@@ -415,18 +409,6 @@
                                  "Tahoma",
                                  "Verdana",
                                  "Georgia"
-                              ]
-                           }
-                        },
-                        "heading":{
-                           "type":"string",
-                           "minLength":1,
-                           "format":"markdown",
-                           "title":"Heading Text:",
-                           "options":{
-                              "input_height":"100px",
-                              "validate":[
-                                 "handlebars"
                               ]
                            }
                         }
