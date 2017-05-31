@@ -36,10 +36,9 @@
       <div class="squatch-body">
         <!-- LAYOUT GOES HERE -->
         <div class="squatch-row">
-          {{#each (variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutComponents' isContext=true)}}
-            {{{name}}}
-            {{{columns}}}
-          {{/each}}
+          {{#with (variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutComponents' isContext=true)}}
+            {{lookup . .}}
+          {{/with}}
         </div>
 
 
