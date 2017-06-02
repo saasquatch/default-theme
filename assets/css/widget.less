@@ -61,8 +61,25 @@
   }
 }
 
+.small-12 {
+
+  &:hover {
+    border: 2px dashed #f8e81c;
+  }
+}
+
 .small-6 {
   width: 50%;
   float: left;
-  border: 2px dashed #f8e81c;
+
+  &:hover {
+    border: 2px dashed #f8e81c;
+  }
+
+  & + & {
+
+    &:hover {
+      border-left: 0;
+    }
+  }
 }
