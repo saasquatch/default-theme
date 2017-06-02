@@ -48,14 +48,21 @@
 
 
 .squatch-row {
-  border: 2px dashed #0c606e;
+
+  &:hover {
+    border: 2px dashed #0c606e;
+  }
 
   & + & {
-    border-top: 0;
+
+    &:hover {
+      border-top: 0;
+    }
   }
 }
 
 .small-6 {
   width: 50%;
   float: left;
+  border: 2px dashed #f8e81c;
 }
