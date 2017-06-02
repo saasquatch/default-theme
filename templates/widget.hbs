@@ -38,11 +38,16 @@
         <div class="squatch-row">
           {{#each (variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutRows')}}
 
-            {{length}}
+            <!-- TODO: Thinking of adding Foundation grid instead of Bootstrap -->
 
-            {{#each rowComponents}}
-              {{name}}
-            {{/each}}
+            <div class="row">
+              {{#each rowComponents}}
+                <div class="small-{{math '12 / ' length}}">
+                  {{name}}
+                </div>
+              {{/each}}
+            </div>
+
           {{/each}}
         </div>
 
