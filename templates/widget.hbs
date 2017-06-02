@@ -46,9 +46,7 @@
                 <div class="small-{{math '12 / ' length}}">
 
                   {{!-- This doesn't work for some reason --}}
-                  {{#> (stringFormat 'components/%s/index' componentName)}}
-                    Component not found.
-                  {{/ (stringFormat 'components/%s/index' componentName)}}
+                  {{> (stringFormat 'components/%s/index' 'text')}}
 
                   {{#if (stringCompare componentName "text" emptyOnFalse=true)}}
                     {{> components/text/index}}
