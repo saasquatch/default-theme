@@ -122,6 +122,11 @@
                                                    }
                                                  }
                                                }
+                                            },
+                                            "length": {
+                                              "title":"Number of columns",
+                                              "type":"number",
+                                              "default":1
                                             }
                                          }
                                       }
