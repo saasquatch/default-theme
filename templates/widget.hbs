@@ -44,7 +44,13 @@
 
               {{#each rowComponents}}
                 <div class="small-{{math '12 / ' length}}">
-                  {{{> (stringFormat 'components/%s/index' componentName)}}}
+
+                  {{!-- This doesn't work for some reason --}}
+                  {{!-- {{> (stringFormat 'components/%s/index' componentName)}} --}}
+
+                  {{#if (stringCompare componentName "text" emptyOnFalse=true)}}
+                    {{> components/text/index}}
+                  {{/if}}
                 </div>
               {{/each}}
 
