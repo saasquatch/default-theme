@@ -36,7 +36,10 @@
       <div class="squatch-body">
         <!-- LAYOUT GOES HERE -->
         <div class="squatch-row">
-          {{#each (variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutComponents')}}
+          {{#each (variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutRows')}}
+
+            {{rowComponents.length}}
+
             {{#each rowComponents}}
               {{name}}
             {{/each}}
