@@ -109,15 +109,19 @@
                                       "items":{
                                          "type":"object",
                                          "properties":{
-                                            "name":{
-                                               "type":"string",
-                                               "title":"Component Name",
-                                               "default":"text"
-                                            },
-                                            "columns":{
-                                               "type":"number",
-                                               "title":"Number of columns",
-                                               "default":1
+                                            "rowComponents":{
+                                               "title":"Components in row",
+                                               "type":"array",
+                                               "items":{
+                                                 "type":"object",
+                                                 "properties":{
+                                                   "name":{
+                                                      "type":"string",
+                                                      "title":"Component Name",
+                                                      "default":"text"
+                                                   }
+                                                 }
+                                               }
                                             }
                                          }
                                       }
