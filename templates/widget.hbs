@@ -40,12 +40,15 @@
 
             <!-- TODO: Thinking of adding Foundation grid instead of Bootstrap -->
 
-            <div class="row">
+            <div class="row squatch-row"
+                 style="padding: {{paddingTop}}px;">
+
               {{#each rowComponents}}
                 <div class="small-{{math '12 / ' length}}">
                   {{name}}
                 </div>
               {{/each}}
+
             </div>
 
           {{/each}}

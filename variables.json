@@ -127,6 +127,11 @@
                                               "title":"Number of columns",
                                               "type":"number",
                                               "default":1
+                                            },
+                                            "padding":{
+                                              "title":"Padding",
+                                              "type":"number",
+                                              "default":20
                                             }
                                          }
                                       }
