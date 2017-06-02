@@ -35,12 +35,9 @@
     <main class="squatch-container squatch-container-{{lower mode}}">
       <div class="squatch-body">
         <!-- LAYOUT GOES HERE -->
-        <div class="squatch-row">
           {{#each (variables-object 'widget.REFERRER_WIDGET.content.widgetCustomization.layoutRows')}}
 
             <!-- TODO: Thinking of adding Foundation grid instead of Bootstrap -->
-
-            {{lookup . .}}
 
             <div class="row squatch-row"
                  style="padding: {{paddingTop}}px;">
@@ -54,7 +51,6 @@
             </div>
 
           {{/each}}
-        </div>
 
 
       </div>
