@@ -115,10 +115,19 @@
                                                "items":{
                                                  "type":"object",
                                                  "properties":{
-                                                   "name":{
+                                                   "componentName":{
                                                       "type":"string",
-                                                      "title":"Component Name",
-                                                      "default":"text"
+                                                      "title":"Component:",
+                                                      "enum":[
+                                                         "text",
+                                                         "image"
+                                                      ],
+                                                      "options":{
+                                                         "enum_titles":[
+                                                            "Text",
+                                                            "Image"
+                                                         ]
+                                                      }
                                                    }
                                                  }
                                                }

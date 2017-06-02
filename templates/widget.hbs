@@ -44,7 +44,7 @@
 
               {{#each rowComponents}}
                 <div class="small-{{math '12 / ' length}}">
-                  {{name}}
+                  {{> (stringFormat ''/components/%s.hbs' componentName)}}
                 </div>
               {{/each}}
 
