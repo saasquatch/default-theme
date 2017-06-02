@@ -103,7 +103,7 @@
                               {
                                  "title":"Customize Referral Widget",
                                  "properties":{
-                                    "layoutComponents":{
+                                    "layoutRows":{
                                       "title":"Widget Layout",
                                       "type":"array",
                                       "items":{
