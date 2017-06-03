@@ -122,12 +122,10 @@
                                                          "text",
                                                          "image"
                                                       ],
-                                                      "options":{
-                                                         "enum_titles":[
-                                                            "Text",
-                                                            "Image"
-                                                         ]
-                                                      }
+                                                      "options":[{
+                                                        "value":"text",
+                                                        "padding":20
+                                                      }]
                                                    }
                                                  }
                                                }
