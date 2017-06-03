@@ -119,13 +119,21 @@
                                                       "type":"string",
                                                       "title":"Component:",
                                                       "enum":[
-                                                         "text",
-                                                         "image"
+                                                         {
+                                                           "text":"Some Text",
+                                                           "padding":10
+                                                         },
+                                                         {
+                                                           "url":"https://saasquatch.com/path/to/image.png",
+                                                           "width":200
+                                                         }
                                                       ],
-                                                      "options":[{
-                                                        "value":"text",
-                                                        "padding":20
-                                                      }]
+                                                      "options":{
+                                                         "enum_titles":[
+                                                            "Text",
+                                                            "Image"
+                                                         ]
+                                                      }
                                                    }
                                                  }
                                                }
