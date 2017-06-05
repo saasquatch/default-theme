@@ -388,7 +388,7 @@
                         {
                            "properties":{
                               "headerImageUrl":{
-                                 "default":"{{assets 'images/email/referral-started-header.png'}}"
+                                 "default":"{{assets 'images/email/checkmark.png'}}"
                               },
                               "headerContent":{
                                  "default":"#Good News!\nYour friend has signed up for a free account with {{companyName}}!"
