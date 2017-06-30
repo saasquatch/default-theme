@@ -570,7 +570,7 @@
                               "emailDisplayRule":{
                                  "type":"string",
                                  "title":"Display rule",
-                                 "default":"mobile-and-desktop",
+                                 "default":"hidden",
                                  "enum":[
                                     "mobile-and-desktop",
                                     "hidden",
