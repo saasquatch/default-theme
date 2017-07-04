@@ -1,3 +1,4 @@
 cloudsponge.init({
-    skipSourceMenu: true
+    skipSourceMenu: true,
+    sources : ["gmail", "yahoo", "windowslive"]
 });
