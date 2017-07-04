@@ -1,3 +1,3 @@
-window.csPageOptions = {
-  sources: ["gmail", "yahoo", "windowslive"]
-}
+cloudsponge.init({
+    skipSourceMenu: true
+});
