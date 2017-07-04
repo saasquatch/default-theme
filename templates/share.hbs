@@ -3,12 +3,18 @@
   <div class="form-group">
     <div>
       Import contacts: 
-      <img src="{{assets 'images/contacts/gmail.png'}}" class="contact-service">
-      <a class="cloudsponge-launch" data-cloudsponge-source="gmail">Gmail</a> | 
-      <img src="{{assets 'images/contacts/yahoo.png'}}" class="contact-service">
-      <a class="cloudsponge-launch" data-cloudsponge-source="yahoo">Yahoo! Mail</a> | 
-      <img src="{{assets 'images/contacts/windowslive.png'}}" class="contact-service">
-      <a class="cloudsponge-launch" data-cloudsponge-source="windowslive">Outlook</a>
+      <a class="cloudsponge-launch" data-cloudsponge-source="gmail">
+        <img src="{{assets 'images/contacts/gmail.png'}}" class="contact-service">
+        Gmail
+      </a>
+      <a class="cloudsponge-launch" data-cloudsponge-source="yahoo">
+        <img src="{{assets 'images/contacts/yahoo.png'}}" class="contact-service">
+        Yahoo! Mail
+      </a> | 
+      <a class="cloudsponge-launch" data-cloudsponge-source="windowslive">
+        <img src="{{assets 'images/contacts/windowslive.png'}}" class="contact-service">
+        Outlook
+      </a>
     </div>
     <div class="input-group">
       <input class="form-control cloudsponge-contacts">
@@ -17,21 +23,6 @@
       </span>
     </div>
   </div>
-
-<!--  <div class="form-group">
-    <div class="input-group">
-      <input class="form-control" id="squatch-share-link" value="{{shareLinks.shareLink}}" readonly="readonly">
-
-      <span class="label label-default fade" id="squatch-share-notification">Copied!</span>
-
-      <span class="input-group-btn">
-        <button class="btn btn-primary icon-btn copy" data-clipboard-target="#squatch-share-link" data-clipboard-notification="#squatch-share-notification">
-          <i class="icon icon-link"></i>
-          <span class="hidden-sm">Copy</span>
-        </button>
-      </span>
-    </div>
-  </div> -->
 
   <div class="clearfix">
     <a class="btn btn-email squatch-share-btn emailShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailDisplayRule'}}"
