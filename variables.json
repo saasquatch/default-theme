@@ -458,6 +458,57 @@
                      ]
                   }
                }
+            },
+            "REFERRAL_INVITATION":{
+              "type":"object",
+              "properties":{
+                  "configuration":{
+                     "allOf":[
+                        {
+                           "properties":{
+                              "fromName":{
+                                "default":"{{user.firstName}} via {{companyName}}"
+                              },
+                              "fromAddress":{
+                                "default":"invitation@mail.saasquat.ch"
+                              },
+                              "subject":{
+                                 "default":"​{{user.firstName}}​ invited you to {{companyName}}​!"
+                              },
+                              "themeMapping":{
+                                 "default":"emails/invited-contact"
+                              }
+                           }
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/configuration"
+                        }
+                     ]
+                  },
+                  "content":{
+                     "allOf":[
+                        {
+                           "properties":{
+                              "headerImageUrl":{
+                                 "default":"{{assets 'images/email/referral-started-header.png'}}"
+                              },
+                              "headerContent":{
+                                 "default":"{{user.firstName}} has sent you {{format-reward 'REFERRED' includeUnit=true}} off {{companyName}}"
+                              },
+                              "bodyContent":{
+                                 "default":"Description of company/offer"
+                              }
+                           }
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/generalContent"
+                        },
+                        {
+                           "$ref":"#/definitions/email/definitions/shareContent"
+                        }
+                     ]
+                  }
+              }
             }
          }
       }
