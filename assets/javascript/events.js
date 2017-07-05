@@ -9,7 +9,7 @@ function invalidInput(element, fn) {
 }
 
 function contactsHandler() {
-  var sendInvitesBtn = document.getElementsByClassName('squatch-send-invites');
+  var sendInvitesBtn = document.getElementById('squatch-send-invites');
   handleClicks(sendInvitesBtn, function(e) {
     var emails = document.getElementById('contact-list').value;
     console.log('clicked send invites: ' + emails);
