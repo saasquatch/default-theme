@@ -8,6 +8,21 @@ function invalidInput(element, fn) {
   }
 }
 
+function contactsHandler() {
+  var sendInvitesBtn = document.getElementsByClassName('squatch-send-invites');
+  handleClicks(sendInvitesBtn, function(e) {
+    var emails = document.getElementById('contact-list').value;
+    console.log('clicked send invites: ' + emails);
+
+    var emailList = emails.split(',');
+
+    if (window.frameElement && window.frameElement.squatchJsApi) {
+      window.frameElement.squatchJsApi._inviteContacts(window.squatch, emailList);
+    }
+
+  });
+}
+
 function emailFormHandler() {
   var sendEmailBtn = document.getElementById('squatch-send-email');
   var firstName = document.getElementById('squatch-user-firstname');

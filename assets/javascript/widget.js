@@ -13,6 +13,7 @@
     messengerHandler();
     smsHandler();
     whatsappHandler();
+    contactsHandler();
 
     var inValidRange = function(offset, limit) {
       return offset >= 0 && offset < limit;
@@ -156,15 +157,6 @@
         }
       }
     });
-
-    each(document.getElementsByClassName('squatch-send-invites'), function(e1) {
-      if (isDOMElement(e1)) {
-        handleClicks(e1, function(e) {
-          console.log('clicked send invites');
-        });
-      }
-    });
-
 
     var setContainerHeight = function(containerEl) {
       var bodyEl           = document.getElementsByClassName('squatch-body')[0];
