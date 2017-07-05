@@ -502,9 +502,6 @@
                         },
                         {
                            "$ref":"#/definitions/email/definitions/generalContent"
-                        },
-                        {
-                           "$ref":"#/definitions/email/definitions/shareContent"
                         }
                      ]
                   }
