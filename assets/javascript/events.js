@@ -9,6 +9,7 @@ function invalidInput(element, fn) {
 }
 
 function contactsHandler() {
+  // setup invitation sending click handler
   var sendInvitesBtn = document.getElementById('squatch-send-invites');
   handleClicks(sendInvitesBtn, function(e) {
     var emails = document.getElementById('contact-list').value;
@@ -19,8 +20,16 @@ function contactsHandler() {
     if (window.frameElement && window.frameElement.squatchJsApi) {
       window.frameElement.squatchJsApi._inviteContacts(window.squatch, emailList);
     }
-
   });
+
+  // setup invite input handler
+  var inviteInput = document.getElementById('');
+  inviteInput.oninput = function() {
+    console.log("text input changed");
+  };
+  inviteInput.onpropertychange = inviteInput.oninput; // for IE8
+
+
 }
 
 function emailFormHandler() {
