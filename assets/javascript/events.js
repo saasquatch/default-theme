@@ -45,18 +45,17 @@ function contactsHandler() {
     if(inviteInput.value) {
       // enable if valid email list input is found
       var emails = getEmailList(document.getElementById('contact-list'));
-      if(!invalidEmails(emails)) {
+      if(invalidEmails(emails)) {
+        my_addClass(sendInvitesBtn, 'disabled');
+      } else {
         my_removeClass(sendInvitesBtn, 'disabled');
       }
     } else {
       // disabled by default
       my_addClass(sendInvitesBtn, 'disabled');
     }
-    console.log("text input changed");
   };
   inviteInput.onpropertychange = inviteInput.oninput; // for IE8 - see https://stackoverflow.com/a/26202266
-
-
 }
 
 function emailFormHandler() {
