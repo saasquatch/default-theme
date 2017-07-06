@@ -25,9 +25,16 @@ function contactsHandler() {
   // setup invite input handler
   var inviteInput = document.getElementById('contact-list');
   inviteInput.oninput = function() {
+    if(inviteInput.value) {
+      // enable if valid email list input is found
+      my_removeClass(inviteInput, 'disabled');
+    } else {
+      // disabled by default
+      my_addClass(inviteInput, 'disabled');
+    }
     console.log("text input changed");
   };
-  inviteInput.onpropertychange = inviteInput.oninput; // for IE8
+  inviteInput.onpropertychange = inviteInput.oninput; // for IE8 - see https://stackoverflow.com/a/26202266
 
 
 }
