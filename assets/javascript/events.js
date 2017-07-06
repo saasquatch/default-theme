@@ -34,7 +34,7 @@ function contactsHandler() {
     var emails = getEmailList(document.getElementById('contact-list'));
     var updateInvitesBtn = function(addClass, removeClass, btnText) {
       my_removeClass(sendInvitesBtn, removeClass);
-      my_addClass(sendInvitesBtn, addClas);
+      my_addClass(sendInvitesBtn, addClass);
       sendInvitesBtn.value = btnText;
     }
 
