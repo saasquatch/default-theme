@@ -40,14 +40,17 @@ function contactsHandler() {
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
       window.frameElement.squatchJsApi._inviteContacts(window.squatch, emails);
-      updateInvitesBtn('btn-success', 'btn-primary', 'Invites Sent!');
-      sendInvitesBtn.blur();
-      setTimeout(function(){
-        updateInvitesBtn('btn-primary', 'btn-success', 'Send Invites');
-        document.getElementById('contact-list').value = ''; // reset email list to empty
-        my_addClass(sendInvitesBtn, 'disabled');
-      }, 2000);
+    } else {
+      console.warn("Email invite feature not configured for HOSTED/PREVIEW");
     }
+
+    updateInvitesBtn('btn-success', 'btn-primary', 'Invites Sent!');
+    sendInvitesBtn.blur();
+    setTimeout(function(){
+      updateInvitesBtn('btn-primary', 'btn-success', 'Send Invites');
+      document.getElementById('contact-list').value = ''; // reset email list to empty
+      my_addClass(sendInvitesBtn, 'disabled');
+    }, 2000);
   });
 
   // setup invite input handler
