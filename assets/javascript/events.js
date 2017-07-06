@@ -35,7 +35,7 @@ function contactsHandler() {
     var updateInvitesBtn = function(addClass, removeClass, btnText) {
       my_removeClass(sendInvitesBtn, removeClass);
       my_addClass(sendInvitesBtn, addClass);
-      sendInvitesBtn.value = btnText;
+      sendInvitesBtn.firstChild.data = btnText;
     }
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
