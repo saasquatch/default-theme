@@ -32,13 +32,19 @@ function contactsHandler() {
   var sendInvitesBtn = document.getElementById('squatch-send-invites');
   handleClicks(sendInvitesBtn, function(e) {
     var emails = getEmailList(document.getElementById('contact-list'));
-    console.log('clicked send invites: ' + emails);
+    var updateInvitesBtn = function(addClass, removeClass, btnText) {
+      my_removeClass(sendInvitesBtn, removeClass);
+      my_addClass(sendInvitesBtn, addClas);
+      sendInvitesBtn.value = btnText;
+    }
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
       window.frameElement.squatchJsApi._inviteContacts(window.squatch, emails);
-      my_removeClass(sendInvitesBtn, 'btn-primary');
-      my_addClass(sendInvitesBtn, 'btn-success');
-      sendInvitesBtn.value = 'Invites Sent!';
+      updateInvitesBtn('btn-success', 'btn-primary', 'Invites Sent!');
+      setTimeout(function(){
+        updateInvitesBtn('btn-primary', 'btn-success', 'Send Invites');
+        document.getElementById('contact-list').value = ''; // reset email list to empty
+      }, 3000);
     }
   });
 
