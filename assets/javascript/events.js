@@ -36,6 +36,9 @@ function contactsHandler() {
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
       window.frameElement.squatchJsApi._inviteContacts(window.squatch, emails);
+      my_removeClass(sendInvitesBtn, 'btn-primary');
+      my_addClass(sendInvitesBtn, 'btn-success');
+      sendInvitesBtn.value = 'Invites Sent!';
     }
   });
 
