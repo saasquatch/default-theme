@@ -45,7 +45,8 @@ function contactsHandler() {
       setTimeout(function(){
         updateInvitesBtn('btn-primary', 'btn-success', 'Send Invites');
         document.getElementById('contact-list').value = ''; // reset email list to empty
-      }, 3000);
+        my_addClass(sendInvitesBtn, 'disabled');
+      }, 2000);
     }
   });
 
