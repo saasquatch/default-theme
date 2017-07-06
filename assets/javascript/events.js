@@ -27,10 +27,10 @@ function contactsHandler() {
   inviteInput.oninput = function() {
     if(inviteInput.value) {
       // enable if valid email list input is found
-      my_removeClass(inviteInput, 'disabled');
+      my_removeClass(sendInvitesBtn, 'disabled');
     } else {
       // disabled by default
-      my_addClass(inviteInput, 'disabled');
+      my_addClass(sendInvitesBtn, 'disabled');
     }
     console.log("text input changed");
   };
