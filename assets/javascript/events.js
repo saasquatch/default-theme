@@ -8,17 +8,34 @@ function invalidInput(element, fn) {
   }
 }
 
+function getEmailList(element) {
+  var emails = element.value;
+  emails = emails.split(',');
+  for (var i = 0; i < emails.length; i++) {
+    emails[i] = emails[i].replace(/[<>]/g, '');
+  }
+  return emails;
+}
+
+function invalidEmails(emails) {
+  // validate a provided list of emails and return true if any are invalid
+  for (var i = 0; i < emails.length; i++) {
+    if(!/\S+@\S+\.\S+/.test(emails[i])) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function contactsHandler() {
   // setup invitation sending click handler
   var sendInvitesBtn = document.getElementById('squatch-send-invites');
   handleClicks(sendInvitesBtn, function(e) {
-    var emails = document.getElementById('contact-list').value;
+    var emails = getEmailList(document.getElementById('contact-list'));
     console.log('clicked send invites: ' + emails);
 
-    var emailList = emails.split(',');
-
     if (window.frameElement && window.frameElement.squatchJsApi) {
-      window.frameElement.squatchJsApi._inviteContacts(window.squatch, emailList);
+      window.frameElement.squatchJsApi._inviteContacts(window.squatch, emails);
     }
   });
 
@@ -27,7 +44,10 @@ function contactsHandler() {
   inviteInput.oninput = function() {
     if(inviteInput.value) {
       // enable if valid email list input is found
-      my_removeClass(sendInvitesBtn, 'disabled');
+      var emails = getEmailList(document.getElementById('contact-list'));
+      if(!invalidEmails(emails)) {
+        my_removeClass(sendInvitesBtn, 'disabled');
+      }
     } else {
       // disabled by default
       my_addClass(sendInvitesBtn, 'disabled');
