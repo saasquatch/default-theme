@@ -23,7 +23,7 @@ function contactsHandler() {
   });
 
   // setup invite input handler
-  var inviteInput = document.getElementById('');
+  var inviteInput = document.getElementById('contact-list');
   inviteInput.oninput = function() {
     console.log("text input changed");
   };
