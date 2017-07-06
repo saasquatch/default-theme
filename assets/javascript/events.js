@@ -49,7 +49,7 @@ function contactsHandler() {
     setTimeout(function(){
       updateInvitesBtn('btn-primary', 'btn-success', 'Send Invites');
       document.getElementById('contact-list').value = ''; // reset email list to empty
-      my_addClass(sendInvitesBtn, 'disabled');
+      document.getElementById('contact-list').oninput(); // force input change check
     }, 2000);
   });
 
