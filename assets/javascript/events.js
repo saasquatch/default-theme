@@ -40,6 +40,7 @@ function contactsHandler() {
 
     if (window.frameElement && window.frameElement.squatchJsApi) {
       window.frameElement.squatchJsApi._inviteContacts(window.squatch, emails);
+      window.frameElement.squatchJsApi._shareEvent(window.squatch, 'EMAIL'); // send analytic event
     } else {
       console.warn("Email invite feature not configured for HOSTED/PREVIEW");
     }

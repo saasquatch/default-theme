@@ -1,5 +1,6 @@
 <div class="squatch-share">
 
+{{#if user.email}}
   <div class="form-group">
     <div class="contacts-importer">
       Import contacts: &nbsp;&nbsp;
@@ -23,6 +24,7 @@
       </span>
     </div>
   </div>
+{{/if}}
 
   <div class="clearfix">
     <a class="btn btn-email squatch-share-btn emailShare {{variables 'widget.REFERRER_WIDGET.content.sharingOptions.EMAIL.emailDisplayRule'}}"

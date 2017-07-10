@@ -467,13 +467,13 @@
                         {
                            "properties":{
                               "fromName":{
-                                "default":"{{user.firstName}} via {{companyName}}"
+                                "default":"{{stringEmptyHandler user.firstName onEmpty='A friend'}} via {{companyName}}"
                               },
                               "fromAddress":{
                                 "default":"invitation@mail.saasquat.ch"
                               },
                               "subject":{
-                                 "default":"​{{user.firstName}}​ invited you to {{companyName}}​!"
+                                 "default":"{{stringEmptyHandler user.firstName onEmpty='A friend'}}​ invited you to {{companyName}}​!"
                               },
                               "themeMapping":{
                                  "default":"emails/invited-contact"
@@ -493,7 +493,7 @@
                                  "default":"{{assets 'images/email/referral-started-header.png'}}"
                               },
                               "headerContent":{
-                                 "default":"{{user.firstName}} has sent you {{format-reward 'REFERRED' includeUnit=true}} off {{companyName}}"
+                                 "default":"{{stringEmptyHandler user.firstName onEmpty='A friend'}} has sent you {{format-reward 'REFERRED' includeUnit=true}} off {{companyName}}"
                               },
                               "bodyContent":{
                                  "default":"Description of company/offer"
