@@ -20,7 +20,7 @@ function getEmailList(element) {
 function invalidEmails(emails) {
   // validate a provided list of emails and return true if any are invalid
   for (var i = 0; i < emails.length; i++) {
-    if(!/\S+@\S+\.\S+/.test(emails[i])) {
+    if(!isValidEmail(emails[i])) {
       return true;
     }
   }
