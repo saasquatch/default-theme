@@ -156,6 +156,12 @@
                                           "default":true
                                         }
                                       }
+                                    },
+                                    "cloudspongeKey": {
+                                      "title":"CloudSponge Key",
+                                      "format":"text",
+                                      "type":"string",
+                                      "default":"174247c77cd5f383430223fac43d4d7bed9575ca"
                                     }
                                  }
                               },
