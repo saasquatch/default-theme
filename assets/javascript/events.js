@@ -186,7 +186,6 @@ function facebookHandler() {
   // test this first
   var FBDesc      = 'Your custom description';
   var FBTitle     = 'Your custom title';
-  var FBLink      = squatch.user.facebook.link;
   var FBPic       = squatch.user.facebook.shareImage;
 
 
@@ -196,7 +195,6 @@ function facebookHandler() {
         action_type: 'og.shares',
         action_properties: JSON.stringify({
             object: {
-                'og:url': FBLink,
                 'og:title': FBTitle,
                 'og:description': FBDesc,
                 'og:image': FBPic
