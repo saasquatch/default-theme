@@ -153,7 +153,7 @@ function whatsappHandler() {
   });
 }
 
-function facebookHandler() {
+function facebookHandler_deprecated() {
   var facebookBtn = document.getElementsByClassName('fbShare')[0];
 
   if (!facebookBtn) return;
@@ -175,6 +175,36 @@ function facebookHandler() {
       window.frameElement.squatchJsApi._shareEvent(window.squatch, 'FACEBOOK');
     }
   });
+}
+
+function facebookHandler() {
+  var facebookBtn = document.getElementsByClassName('fbShare')[0];
+
+  if (!facebookBtn) return;
+
+  // Dynamically gather and set the FB share data.
+  // test this first
+  var FBDesc      = 'Your custom description';
+  var FBTitle     = 'Your custom title';
+  var FBLink      = 'http://google.ca/';
+  var FBPic       = squatch.user.facebook.shareImage;
+
+  FB.ui({
+      method: 'share_open_graph',
+      action_type: 'og.shares',
+      action_properties: JSON.stringify({
+          object: {
+              'og:url': FBLink,
+              'og:title': FBTitle,
+              'og:description': FBDesc,
+              'og:image': FBPic
+          }
+      })
+  },
+  function (response) {
+    // Action after response
+    console.log(response);
+  })
 }
 
 function twitterHandler() {
