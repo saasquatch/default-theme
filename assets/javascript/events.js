@@ -189,22 +189,25 @@ function facebookHandler() {
   var FBLink      = 'http://google.ca/';
   var FBPic       = squatch.user.facebook.shareImage;
 
-  FB.ui({
-      method: 'share_open_graph',
-      action_type: 'og.shares',
-      action_properties: JSON.stringify({
-          object: {
-              'og:url': FBLink,
-              'og:title': FBTitle,
-              'og:description': FBDesc,
-              'og:image': FBPic
-          }
-      })
-  },
-  function (response) {
-    // Action after response
-    console.log(response);
-  })
+
+  handleClicks(facebookBtn, function(e) {
+    FB.ui({
+        method: 'share_open_graph',
+        action_type: 'og.shares',
+        action_properties: JSON.stringify({
+            object: {
+                'og:url': FBLink,
+                'og:title': FBTitle,
+                'og:description': FBDesc,
+                'og:image': FBPic
+            }
+        })
+    },
+    function (response) {
+      // Action after response
+      console.log(response);
+    });
+  });
 }
 
 function twitterHandler() {
