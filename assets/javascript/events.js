@@ -186,7 +186,7 @@ function facebookHandler() {
   // test this first
   var FBDesc      = 'Your custom description';
   var FBTitle     = 'Your custom title';
-  var FBLink      = 'http://google.ca/';
+  var FBLink      = squatch.user.facebook.link;
   var FBPic       = squatch.user.facebook.shareImage;
 
 
