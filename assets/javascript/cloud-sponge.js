@@ -6,7 +6,7 @@ function handleImportedContacts(contacts, source, owner) {
 cloudsponge.init({
     skipSourceMenu: true,
     afterSubmitContacts: handleImportedContacts,
-    selectionLimit : 2,
+    selectionLimit : 100,
     displaySelectAllNone : false,
     sources : ["gmail", "yahoo", "windowslive"]
 });
