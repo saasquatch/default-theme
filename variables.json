@@ -629,19 +629,24 @@
                               "facebookShareImageURL":{
                                  "type":"string",
                                  "title":"Facebook URL Image",
-                                 "default":""
+                                 "default":"",
+				 "options":{
+                                    "hidden":true
+                                  }
                               },
                               "facebookShareSubject":{
                                  "type":"string",
                                  "title":"Facebook share subject",
                                  "minLength":4,
-                                 "default":"Get ${{math programDetails.referredRewardDetails.credit ' / 100'}} off {{companyName}}"
+                                 "default":"Get ${{math programDetails.referredRewardDetails.credit ' / 100'}} off {{companyName}}",
+				 "hidden":true
                               },
                               "facebookShareBody":{
                                  "type":"string",
                                  "title":"Facebook share subject",
                                  "minLength":4,
-                                 "default":"Sign up for a {{companyName}} account and we both get ${{math programDetails.referredRewardDetails.credit ' / 100'}} free credit. Use this link {{shareLinks.facebookShareLink}}"
+                                 "default":"Sign up for a {{companyName}} account and we both get ${{math programDetails.referredRewardDetails.credit ' / 100'}} free credit. Use this link {{shareLinks.facebookShareLink}}",
+				 "hidden":true
                               },
                               "facebookDisplayRule":{
                                  "type":"string",
