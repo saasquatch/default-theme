@@ -41,14 +41,19 @@
 
   <body>
     <main class="squatch-container squatch-container-{{lower mode}}">
+      <div class="squatch-banner">
+        <img src="http://res.cloudinary.com/saasquatch/image/upload/v1522952429/Payload-by-Microdea-white_ringnu.png" alt="" >
+      </div>
       <div class="squatch-body">
-        {{> title}}
+        <div class="squatch-body-overlay">
+          {{> title}}
 
-        <button class="close squatch-header-close" data-close-panel="#squatch-panel">{{variables 'widget.REFERRER_WIDGET.content.textVariables.panelClose'}}</button>
+          <button class="close squatch-header-close" data-close-panel="#squatch-panel">{{variables 'widget.REFERRER_WIDGET.content.textVariables.panelClose'}}</button>
 
-        {{> lead}}
-        {{> cta}}
-        {{> share}}
+          {{> lead}}
+          {{> cta}}
+          {{> share}}
+        </div>
       </div>
 
       {{#if user.email}}
