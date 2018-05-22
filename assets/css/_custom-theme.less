@@ -2,13 +2,38 @@ a.squatch-share-btn {
   background-color: white;
   border-radius: 50%;
   height: 50px;
+  font-size: 18px;
   line-height: 50px;
+  margin: 50px 14px 20px;
   padding: 0;
   text-align: center;
   width: 50px;
 
   &::before {
     content: none;
+  }
+
+  &:hover {
+    background: #ddd;
+  }
+  
+  .icon {
+    margin: 0;
+    position: relative;
+    width: auto;
+
+    &.icon-facebook {
+      left: -2px;
+      top: -1px;
+    }
+
+    &.icon-twitter {
+      top: -1px;
+    }
+
+    &.icon-mail {
+      top: -2px;
+    }
   }
 
   &.btn-facebook {
@@ -22,7 +47,7 @@ a.squatch-share-btn {
   }
 
   &.btn-email {
-    border: 1px solid #373a3d;
-    color: #373a3d;
+    border: 1px solid #8a8a8e;
+    color: #8a8a8e;
   }
 }
