@@ -251,7 +251,7 @@
                                        "type": "object",
                                        "properties": {
                                           "copy": {
-                                             "default": "Copy"
+                                             "default": "COPY LINK"
                                           },
                                           "email": {
                                              "default": "Email"
