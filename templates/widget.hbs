@@ -16,9 +16,9 @@
     {{> theme_messages}}
     {{squatchHead}}
 
-    <script>
-      window.allTheData = {{{variables-object .}}}
-    </script>
+    <script type="text/plain" id="allTheData">
+      {{{variables-object .}}}
+    </script>    
     <script src="{{assets 'libs/mobile-detect.min.js'}}"></script>
     <script src="{{assets 'javascript/base.js'}}"></script>
     <script src="{{assets 'javascript/events.js'}}"></script>
