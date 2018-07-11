@@ -17,7 +17,42 @@
     {{squatchHead}}
 
     <script>
-      window.allTheData = {{{lookup .}}}
+      window.allTheData = {
+        preview: {{{preview}}},
+        locale: {{{locale}}},
+        tenantAlias: {{{tenantAlias}}},
+        companyName: {{{companyName}}},
+        referredBy: {{{referredBy}}},
+        referrals: {{{referrals}}},
+        rewardBalances: {{{rewardBalances}}},
+        isSecureUrl: {{{isSecureUrl}}},
+        shareLinks: {{{shareLinks}}},
+        mode: {{{mode}}},        
+        rewardLimitReached: {{{rewardLimitReached}}},
+        programDetails: {{{programDetails}}},        
+        newReferral: {{{newReferral}}},
+        convertedReferral: {{{convertedReferral}}},        
+        rewards: {{{rewards}}},
+        convertedReferralsCount: {{{convertedReferralsCount}}},        
+        unconvertedReferralsCount: {{{unconvertedReferralsCount}}},
+        totalRewardsEarnedCount: {{{totalRewardsEarnedCount}}},        
+        totalRewardsPendingCount: {{{totalRewardsPendingCount}}},
+        variables: {{{variables}}},        
+        timeCreditRewardBalance: {{{timeCreditRewardBalance}}},
+        dollarCreditRewardBalance: {{{dollarCreditRewardBalance}}},        
+        discountRewardBalance: {{{discountRewardBalance}}},
+        referralsLength: {{{referralsLength}}},        
+        rewardsLength: {{{rewardsLength}}},
+        referralAndRewardListLength: {{{referralAndRewardListLength}}},        
+        nonCancelledReferralAndRewardsListLength: {{{nonCancelledReferralAndRewardsListLength}}},
+        rewardsBySource: {{{rewardsBySource}}},        
+        hasNonCancelledReferralsOrRewards: {{{hasNonCancelledReferralsOrRewards}}},
+        totalConvertedValues: {{{totalConvertedValues}}},
+        variablesSchema: {{{variablesSchema}}},
+        assetVersion: {{{assetVersion}}},
+        includeSquatchHeaderScripts: {{{includeSquatchHeaderScripts}}},
+        headerVersion: {{{headerVersion}}}
+      }
     </script>
     <script src="{{assets 'libs/mobile-detect.min.js'}}"></script>
     <script src="{{assets 'javascript/base.js'}}"></script>
