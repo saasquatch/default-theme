@@ -29,6 +29,105 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface ActionsPanel {
+
+    }
+  }
+
+  interface HTMLActionsPanelElement extends StencilComponents.ActionsPanel, HTMLStencilElement {}
+
+  var HTMLActionsPanelElement: {
+    prototype: HTMLActionsPanelElement;
+    new (): HTMLActionsPanelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'actions-panel': HTMLActionsPanelElement;
+  }
+  interface ElementTagNameMap {
+    'actions-panel': HTMLActionsPanelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'actions-panel': JSXElements.ActionsPanelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ActionsPanelAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface AttributionPanel {
+
+    }
+  }
+
+  interface HTMLAttributionPanelElement extends StencilComponents.AttributionPanel, HTMLStencilElement {}
+
+  var HTMLAttributionPanelElement: {
+    prototype: HTMLAttributionPanelElement;
+    new (): HTMLAttributionPanelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'attribution-panel': HTMLAttributionPanelElement;
+  }
+  interface ElementTagNameMap {
+    'attribution-panel': HTMLAttributionPanelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'attribution-panel': JSXElements.AttributionPanelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AttributionPanelAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface BodyPanel {
+
+    }
+  }
+
+  interface HTMLBodyPanelElement extends StencilComponents.BodyPanel, HTMLStencilElement {}
+
+  var HTMLBodyPanelElement: {
+    prototype: HTMLBodyPanelElement;
+    new (): HTMLBodyPanelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'body-panel': HTMLBodyPanelElement;
+  }
+  interface ElementTagNameMap {
+    'body-panel': HTMLBodyPanelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'body-panel': JSXElements.BodyPanelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface BodyPanelAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface MyComponent {
       'first': string;
       'last': string;
@@ -56,6 +155,171 @@ declare global {
     export interface MyComponentAttributes extends HTMLAttributes {
       'first'?: string;
       'last'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PanelSummary {
+
+    }
+  }
+
+  interface HTMLPanelSummaryElement extends StencilComponents.PanelSummary, HTMLStencilElement {}
+
+  var HTMLPanelSummaryElement: {
+    prototype: HTMLPanelSummaryElement;
+    new (): HTMLPanelSummaryElement;
+  };
+  interface HTMLElementTagNameMap {
+    'panel-summary': HTMLPanelSummaryElement;
+  }
+  interface ElementTagNameMap {
+    'panel-summary': HTMLPanelSummaryElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'panel-summary': JSXElements.PanelSummaryAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PanelSummaryAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface SharePanel {
+
+    }
+  }
+
+  interface HTMLSharePanelElement extends StencilComponents.SharePanel, HTMLStencilElement {}
+
+  var HTMLSharePanelElement: {
+    prototype: HTMLSharePanelElement;
+    new (): HTMLSharePanelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'share-panel': HTMLSharePanelElement;
+  }
+  interface ElementTagNameMap {
+    'share-panel': HTMLSharePanelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'share-panel': JSXElements.SharePanelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface SharePanelAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface SquatchForm {
+
+    }
+  }
+
+  interface HTMLSquatchFormElement extends StencilComponents.SquatchForm, HTMLStencilElement {}
+
+  var HTMLSquatchFormElement: {
+    prototype: HTMLSquatchFormElement;
+    new (): HTMLSquatchFormElement;
+  };
+  interface HTMLElementTagNameMap {
+    'squatch-form': HTMLSquatchFormElement;
+  }
+  interface ElementTagNameMap {
+    'squatch-form': HTMLSquatchFormElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'squatch-form': JSXElements.SquatchFormAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface SquatchFormAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface SquatchPanel {
+
+    }
+  }
+
+  interface HTMLSquatchPanelElement extends StencilComponents.SquatchPanel, HTMLStencilElement {}
+
+  var HTMLSquatchPanelElement: {
+    prototype: HTMLSquatchPanelElement;
+    new (): HTMLSquatchPanelElement;
+  };
+  interface HTMLElementTagNameMap {
+    'squatch-panel': HTMLSquatchPanelElement;
+  }
+  interface ElementTagNameMap {
+    'squatch-panel': HTMLSquatchPanelElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'squatch-panel': JSXElements.SquatchPanelAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface SquatchPanelAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface StatsOrForm {
+
+    }
+  }
+
+  interface HTMLStatsOrFormElement extends StencilComponents.StatsOrForm, HTMLStencilElement {}
+
+  var HTMLStatsOrFormElement: {
+    prototype: HTMLStatsOrFormElement;
+    new (): HTMLStatsOrFormElement;
+  };
+  interface HTMLElementTagNameMap {
+    'stats-or-form': HTMLStatsOrFormElement;
+  }
+  interface ElementTagNameMap {
+    'stats-or-form': HTMLStatsOrFormElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'stats-or-form': JSXElements.StatsOrFormAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface StatsOrFormAttributes extends HTMLAttributes {
+
     }
   }
 }
