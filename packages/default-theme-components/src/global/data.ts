@@ -86,7 +86,7 @@ export default (function() {
     rewards: [],
     convertedReferralsCount: 0,
     unconvertedReferralsCount: 0,
-    totalRewardsEarnedCounT: 0,
+    totalRewardsEarnedCount: 0,
     totalRewardsPendingCount: 0,
     assetVersion: "Q4nHgme3",
     includeSquatchHeaderScripts: true,

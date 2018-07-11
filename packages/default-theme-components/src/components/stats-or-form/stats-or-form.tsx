@@ -1,8 +1,7 @@
 import { Component, Prop } from "@stencil/core";
 
 @Component({
-  tag: "stats-or-form",
-  shadow: true
+  tag: "stats-or-form"
 })
 export class MyComponent {
   @Prop({ context: "data" })
