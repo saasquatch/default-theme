@@ -9,10 +9,13 @@
   data-scroll-limit="{{nonCancelledReferralAndRewardsListLength}}">
 
   <table class="squatch-referrals-list">
+    {{log "REFERRED BY" referredBy}}
+    {{log "HAS CANCELLED REFERRED REWARD" referredBy.hasCancelledReferredReward}}
     {{#if referredBy.referredByUser}}
       {{#if options.showReferrer}}
         {{#if referredBy.referredReward}}
           {{#unless referredBy.hasCancelledReferredReward}}
+
             <tr id="0">
               {{#block
                 "referredByUser"
@@ -31,6 +34,7 @@
       {{/if}}
     {{/if}}
 
+    {{log "REFERRALS" referrals}}
     {{#each referrals}}
       {{#unless hasCancelledReferrerReward}}
         <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index}}{{else}}{{math @index '+ 1'}}{{/if}}{{else}}{{math @index}}{{/if}}{{else}}{{math @index}}{{/if}}">
@@ -54,7 +58,9 @@
       {{/unless}}
     {{/each}}
 
+    {{log "REWARDS BY SOURCE" rewardsBySource}}
     {{#each rewardsBySource.MANUAL}}
+      {{#unless isCancelled}}
         <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+' referralsLength}}{{/if}}{{else}}{{math @index '+' referralsLength}}{{/if}}">
           {{#block
             "arbitraryReward"
@@ -72,6 +78,7 @@
 
           {{/block}}
         </tr>
+      {{/unless}}
     {{/each}}
 
     {{#each rewardsBySource.PROGRAM}}
