@@ -1,7 +1,5 @@
 <div class="squatch-referrals-title">
   {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsTitle'}}
-  {{referredBy}}
-  {{referrals}}
 </div>
 
 <div
@@ -9,6 +7,9 @@
   id="squatch-referrals-scroll"
   data-scroll-offset="0"
   data-scroll-limit="{{nonCancelledReferralAndRewardsListLength}}">
+
+  {{referredBy}}
+  {{referrals}}
 
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
