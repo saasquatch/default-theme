@@ -12,6 +12,7 @@
     {{#if referredBy.referredByUser}}
       {{#if options.showReferrer}}
         {{#if referredBy.referredReward}}
+          {{#unless referredBy.hasCancelledReferredReward}}
             <tr id="0">
               {{#block
                 "referredByUser"
@@ -25,11 +26,13 @@
                 {{> (stringFormat "programs/%s/referral" programDetails.referredRewardDetails.rewardType)}}
               {{/block}}
             </tr>
+          {{/unless}}
         {{/if}}
       {{/if}}
     {{/if}}
 
     {{#each referrals}}
+      {{#unless hasCancelledReferrerReward}}
         <tr id="{{#if options.showReferrer}}{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index}}{{else}}{{math @index '+ 1'}}{{/if}}{{else}}{{math @index}}{{/if}}{{else}}{{math @index}}{{/if}}">
           {{#block
             "referredUser"
@@ -48,6 +51,7 @@
 
           {{/block}}
         </tr>
+      {{/unless}}
     {{/each}}
 
     {{#each rewardsBySource.MANUAL}}
@@ -71,6 +75,7 @@
     {{/each}}
 
     {{#each rewardsBySource.PROGRAM}}
+      {{#unless isCancelled}}
         <tr id="{{#if ../referredBy.dateReferred}}{{#if ../referredBy.hasCancelledReferredReward}}{{math @index '+ 1 +' referralsLength}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}{{else}}{{math @index '+ 1 +' referralsLength}}{{/if}}">
           {{#block
             "arbitraryReward"
@@ -84,6 +89,7 @@
 
           {{/block}}
         </tr>
+      {{/unless}}
     {{/each}}
   </table>
 </div>
