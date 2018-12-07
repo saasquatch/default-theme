@@ -8,8 +8,9 @@
   data-scroll-offset="0"
   data-scroll-limit="{{nonCancelledReferralAndRewardsListLength}}">
 
-  {{referredBy}}
-  {{referrals}}
+  <span>Referred By: {{referredBy}}</span>
+  <span>Referreals: {{referrals}}</span>
+  <span>Rewards by Source: {{rewardsBySource}}</span>
 
   <table class="squatch-referrals-list">
     {{#if referredBy.referredByUser}}
