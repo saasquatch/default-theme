@@ -26,6 +26,14 @@
   .linkedinMobile {
     display: none;
   }
+
+  .squatch-body {
+    padding: 15px @body-padding 20px;
+  }
+
+  .squatch-attribution {
+    margin: 7px 0;
+  }
 }
 
 .squatch-header-close {
@@ -52,7 +60,7 @@
   z-index: 120;
   background: @white;
   text-align: center;
-  padding: 38px @body-padding 0;
+  padding: 15px @body-padding 0;
 
   #squatch-panel.open + & {
     .translate(0, 81px);
@@ -68,9 +76,7 @@
     height: auto;
     width: auto;
 
-    .squatch-body {
-      padding: 15px @body-padding 20px;
-    }
+
 
     .squatch-actions {
       display: none;
@@ -78,10 +84,6 @@
 
     [data-close-panel] {
       display: none;
-    }
-
-    .squatch-attribution {
-      margin: 7px 0;
     }
   }
 }
