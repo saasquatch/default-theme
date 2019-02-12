@@ -8,7 +8,7 @@
   // There is another hack in widget.js as well
   // TODO: Find a solution for this and enable responsive styles again.
   @media (max-width: @container-width) {
-    width: auto;
+    width: @container-width;
   }
 
   &,
@@ -63,9 +63,14 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
   .squatch-container.squatch-container-popup {
-    background: hotpink;
+    height: auto;
+    width: auto;
+
+    .squatch-actions {
+      display: none;
+    }
   }
 }
 
