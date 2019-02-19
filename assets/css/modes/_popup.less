@@ -26,6 +26,16 @@
   .linkedinMobile {
     display: none;
   }
+
+  // responsive popup widget style that works with squatch.js v2 but doesn't work with squatch.js v1 - starts here
+  .squatch-body {
+    padding: 15px @body-padding 20px;
+  }
+
+  .squatch-attribution {
+    margin: 7px 0;
+  }
+  // responsive popup widget style that works with squatch.js v2 but doesn't work with squatch.js v1 - ends here
 }
 
 .squatch-header-close {
@@ -52,12 +62,29 @@
   z-index: 120;
   background: @white;
   text-align: center;
-  padding: 15px @body-padding 0;
+  // responsive popup widget style that works with squatch.js v2 but doesn't work with squatch.js v1 - just this line
+  padding: 38px @body-padding 0;
 
   #squatch-panel.open + & {
     .translate(0, 81px);
 
     html.lt-ie9 & {
+      display: none;
+    }
+  }
+}
+
+// responsive popup widget style that works with squatch.js v2 but doesn't work with squatch.js v1 - includes this whole media query
+@media screen and (max-width: 499px) {
+  .squatch-container.squatch-container-popup {
+    height: auto;
+    width: auto;
+
+    .squatch-actions {
+      display: none;
+    }
+
+    [data-close-panel] {
       display: none;
     }
   }
