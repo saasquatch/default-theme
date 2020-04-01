@@ -42,7 +42,7 @@
   <body>
     <main class="squatch-container squatch-container-{{lower mode}}">
       <div class="squatch-body">
-        {{> title}}
+        {{!-- {{> title}} --}}
 
         <button class="close squatch-header-close" data-close-panel="#squatch-panel">{{variables 'widget.REFERRER_WIDGET.content.textVariables.panelClose'}}</button>
 {{!-- 
@@ -99,7 +99,7 @@
     </main>
 
     <div id="cta">
-      {{> cta-widget cta=(variables-object 'widget.REFERRER_WIDGET.cta')}}
+      {{!-- {{> cta-widget cta=(variables-object 'widget.REFERRER_WIDGET.cta')}} --}}
     </div>
 
     <script src="{{assets 'libs/ready.min.js'}}"></script>
