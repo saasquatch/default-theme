@@ -185,8 +185,8 @@
                                        "type":"integer",
                                        "default":1
                                     },
-                                    "popupMarginTop":{
-                                       "title":"Popup Top Margin",
+                                    "popupMargin":{
+                                       "title":"Popup Margin",
                                        "type":"string",
                                        "default":"0"
                                     }
