@@ -310,7 +310,7 @@
                                           "credit": {
                                              "properties": {
                                                 "value": {
-                                                   "default": "${{math reward.value ' / 100'}}"
+                                                   "default": "${{math '100 / 100'}}"
                                                 },
                                                 "description": {
                                                    "default":  "Free Credit"
@@ -327,7 +327,7 @@
                                           "time": {
                                              "properties": {
                                                 "value": {
-                                                   "default": "{{reward.value}} month<span class=\"hidden-{{math reward.value '== 1'}}\">s</span>"
+                                                   "default": "{{reward.value}} month<span class=\"hidden-{{math '1 == 1'}}\">s</span>"
                                                 },
                                                 "description": {
                                                    "default": "Free Time"
@@ -410,10 +410,10 @@
                                              "default": "Reward"
                                           },
                                           "creditReward": {
-                                             "default": "${{math value '/ 100'}}"
+                                             "default": "${{math '100 / 100'}}"
                                           },
                                           "timeReward": {
-                                             "default": "{{value}} Month<span class=\"hidden-{{math value '== 1'}}\">s</span>"
+                                             "default": "{{value}} Month<span class=\"hidden-{{math '1 == 1'}}\">s</span>"
                                           },
                                           "description": {
                                              "default": "Reward Given"
