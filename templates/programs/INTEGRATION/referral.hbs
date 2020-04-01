@@ -1,5 +1,7 @@
 <td>
-  {{#if referral.imageUrl}}
+
+  {{lookup . .}}
+  {{!-- {{#if referral.imageUrl}}
     <img class="img-circle squatch-referrals-avatar" src="{{referral.imageUrl}}">
   {{else}}
     <img class="img-circle squatch-referrals-avatar" src="{{gravatar referral.email default="mm" rating="pg" size=40 secure=isSecureUrl}}">
@@ -103,5 +105,5 @@
       {{else}}
         {{variables 'widget.REFERRER_WIDGET.content.textVariables.pendingReward.giftcard'}}
       {{/if}}
-  </div>
+  </div> --}}
 </td>

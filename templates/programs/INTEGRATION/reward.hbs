@@ -1,5 +1,6 @@
 <td>
-  <img class="img-circle squatch-referrals-avatar" src="http://www.gravatar.com/avatar/3a99ddeabe3bcca7f64938b753005735?s=40&d=mm&r=pg">
+  {{lookup . .}}
+  {{!-- <img class="img-circle squatch-referrals-avatar" src="http://www.gravatar.com/avatar/3a99ddeabe3bcca7f64938b753005735?s=40&d=mm&r=pg">
 
   <div class="squatch-referrals-heading">
     {{#if (stringCompare rewardSource "MANUAL" emptyOnFalse=true)}}
@@ -46,5 +47,5 @@
 
   <div class="squatch-referrals-description hidden-sm text-green">
     {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.description'}}
-  </div>
+  </div> --}}
 </td>
