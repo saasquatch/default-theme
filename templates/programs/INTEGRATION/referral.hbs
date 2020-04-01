@@ -76,7 +76,7 @@
     {{#if reward}}
 
       {{#if reward.value}}
-        {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}}
+        {{!-- {{variables 'widget.REFERRER_WIDGET.content.textVariables.referralReward.credit.value'}} --}}
       {{else}}
         {{#if referred}}
           {{format-reward 'REFERRED' includeUnit=true}}

@@ -30,7 +30,7 @@
 
   <div class="squatch-referrals-heading hidden-sm">
     {{#if (stringCompare unit "CENTS" emptyOnFalse=true)}}
-        {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.creditReward'}}
+        {{!-- {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.creditReward'}} --}}
     {{else}}
       {{#if (stringCompare unit "MONTH" emptyOnFalse=true)}}
         {{variables 'widget.REFERRER_WIDGET.content.textVariables.nonReferralReward.timeReward'}}
