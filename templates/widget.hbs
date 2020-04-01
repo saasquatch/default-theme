@@ -45,13 +45,15 @@
         {{> title}}
 
         <button class="close squatch-header-close" data-close-panel="#squatch-panel">{{variables 'widget.REFERRER_WIDGET.content.textVariables.panelClose'}}</button>
-
+{{!-- 
         {{> lead}}
         {{> cta}}
-        {{> share}}
+        {{> share}} --}}
+
+        {{lookup . .}}
       </div>
 
-      {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
+      {{!-- {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
         {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
           {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
             {{#if user.email}}
@@ -93,7 +95,7 @@
             {{else}} {{> _squatch-form}} {{/if}}
           {{else}} {{> _squatch-panel}} {{/if}}
         {{/if}}
-      {{/if}}
+      {{/if}} --}}
     </main>
 
     <div id="cta">
