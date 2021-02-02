@@ -35,7 +35,23 @@
 
   </head>
   <body>
-		<sqh-global-container class="squatch-container" loadingcolor="#439B76">
+
+    {{!--
+
+    ALL REFERENCED VARIABLES (IN THE WIDGET)
+
+    Header:               widget.REFERRER_WIDGET.content.widgetCustomization.heading
+    Details:              widget.REFERRER_WIDGET.content.widgetCustomization.headerDetails
+    Share Code Details:   widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails 
+    Share Medium Details: widget.REFERRER_WIDGET.content.widgetCustomization.shareMediumDetails 
+
+    Copy Button Text:     widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy
+    Copy Succes:          widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess 
+    Copy Failure:         widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure 
+
+    --}}
+
+    <sqh-global-container class="squatch-container" loadingcolor="#439B76">
 
       <div class="sqh-main-section">
       
@@ -75,8 +91,8 @@
       ></sqh-text-component>
       <mini-copy-box
 				text="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy'}}"
-        copysuccess="Copied"
-        copyfailure="Cannot copy"
+        copysuccess="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess' }}"
+        copyfailure="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure' }}"
         buttoncolor="#0a0005"
         textcolor="#ffdd00"
       ></mini-copy-box>
