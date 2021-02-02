@@ -4,7 +4,7 @@
     <base target="_self">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chipolo Referral Program</title>
+    <title>Western Union Referral Program</title>
     <meta name="description" content="">
     <meta
       name="viewport"
@@ -23,35 +23,117 @@
       href="https://fast.ssqt.io/npm/@saasquatch/vanilla-components-assets@latest/icons.css"
     />
 
+		{{!-- WA assets --}}
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://fast.ssqt.io/npm/@saasquatchisntreal/wa-components-assets@0.0.1/style.css"
+		/>
+
     {{!-- This should have chipolo components --}}
-    {{!-- <script src="https://unpkg.com/@saasquatch/chipolo-components@1.0.x/dist/widget-components/entrypoint.js"></script> --}}
+    <script src="https://fast.ssqt.io/npm/@saasquatchisntreal/wa-components@0.0.1/dist/widget-components/entrypoint.js"></script>
 
   </head>
   <body>
-    <sqh-global-container class="squatch-container" loadingcolor="#439B76">
+		<sqh-global-container class="squatch-container" loadingcolor="#439B76">
+
+      <div class="sqh-main-section">
       
       <sqh-text-component
       sqhbody="true"
       ismarkdown="true"
-      text="There's no limit to the number of friends you can refer, so share your link as many times as you like! <a href='http://www.google.com'>T&C apply.</a>"
-      color="black"
+			text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.heading'}}"
+      color="#0a0005"
+      fontsize="50"
+      textalign="left"
+      paddingtop="0"
+      paddingbottom="0"
+      class="sqh-header-text"
+      ></sqh-text-component>
+
+      <sqh-text-component
+      sqhbody="true"
+      ismarkdown="true"
+			text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.headerDetails' }}"
+      color="#0a0005"
+      fontsize="20"
+      textalign="left"
+      paddingtop="24"
+      paddingbottom="24"
+      class="sqh-description-text"
+      ></sqh-text-component>
+      <sqh-text-component
+      sqhbody="true"
+      ismarkdown="true"
+			text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails' }}"
+      color="#3D3D3D"
       fontsize="18"
       textalign="left"
-      paddingtop="5"
-      paddingbottom="35"
+      paddingtop="0"
+      paddingbottom="0"
+      class="sqh-copy-cta-text"
       ></sqh-text-component>
-      
-      <my-component first="John" last="Doe" />
-      
       <mini-copy-box
-        class="copy-box"
-        text="Copy"
+				text="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy'}}"
         copysuccess="Copied"
-        copyfailure="Failed"
-        buttoncolor="#F9FAFB"
-        textcolor="#909C9E"
+        copyfailure="Cannot copy"
+        buttoncolor="#0a0005"
+        textcolor="#ffdd00"
       ></mini-copy-box>
+      <sqh-text-component
+      sqhbody="true"
+      ismarkdown="true"
+			text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareMediumDetails' }}"
+      color="#3D3D3D"
+      fontsize="14"
+      textalign="left"
+      paddingtop="12"
+      paddingbottom="12"
+      ></sqh-text-component>
+      <wa-share-button-container
+        emaildisplayrule="desktop-mobile"
+				emailtext="{{variables "
+        emailtextcolor="#ffdd00"
+        emailbackgroundcolor="#0a0005"
+        facebookdisplayrule="desktop-mobile"
+        facebooktext="Facebook"
+        facebooktextcolor="#ffdd00"
+        facebookbackgroundcolor="#0a0005"
+        twitterdisplayrule="hidden"
+        twittertext="Twitter"
+        twittertextcolor="#ffffff"
+        twitterbackgroundcolor="#4797d2"
+        smsdisplayrule="hidden"
+        smstext="SMS"
+        smstextcolor="#ffffff"
+        smsbackgroundcolor="#7bbf38"
+        whatsappdisplayrule="hidden"
+        whatsapptext="Whatspp"
+        whatsapptextcolor="#ffffff"
+        whatsappbackgroundcolor="#25D366"
+        linkedindisplayrule="hidden"
+        linkedintext="LinkedIn"
+        linkedintextcolor="#ffffff"
+        linkedinbackgroundcolor="#0084b9"
+        pinterestdisplayrule="hidden"
+        pinteresttext="Pinterest"
+        pinteresttextcolor="#ffffff"
+        pinterestbackgroundcolor="#cb2027"
+        messengerdisplayrule="desktop-mobile"
+        messengertext="Messenger"
+        messengertextcolor="#ffdd00"
+        messengerbackgroundcolor="#0a0005"
+        linedisplayrule="hidden"
+        linetext="Line Messenger"
+        linetextcolor="#ffffff"
+        linebackgroundcolor="#00c300"
+      >
+      </wa-share-button-container>
+      </div>
+      
+      <wa-footer></wa-footer>
 
     </sqh-global-container>
+  </body>
   </body>
 </html>

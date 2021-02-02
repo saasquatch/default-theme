@@ -110,16 +110,16 @@
                                        "default":"#4486E1"
                                     },
                                     "heading":{
-                                       "default":"Give {{format-reward 'REFERRED' includeUnit=true}} and Get {{format-reward 'REFERRER' includeUnit=true}}!"
+                                       "default":"Refer a friend"
                                     },
                                     "headerDetails":{
-                                       "default":"Give a friend {{format-reward 'REFERRED' includeUnit=true includeContextualText=true}} and receive {{format-reward 'REFERRER' includeUnit=true includeContextualText=true}} for yourself when they pay their first bill."
+                                       "default":"With Western Union sending money is hassle free. Are you already enjoying easy, convenient, and fast money transfers with us? If so, spread the word and share it with your friends!"
                                     },
                                     "shareCodeDetails":{
                                        "type":"string",
                                        "format":"markdown",
                                        "title":"Call To Action Text",
-                                       "default":"Share the link below or use the code **{{user.referralCode}}**",
+                                       "default":"Copy the link below and share it with your friends",
                                        "options":{
                                           "input_height":"100px",
                                           "validate":[
@@ -127,6 +127,11 @@
                                           ]
                                        }
                                     },
+																		"shareMediumDetails": {
+																			"type": "string",
+																			"title": "Share Medium Details",
+																			"default": "Or share using below channels"
+																		},
                                     "registrationHeader":{
                                        "type":"string",
                                        "format":"markdown",
