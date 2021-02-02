@@ -1,31 +1,25 @@
 {{!--
-
   Core JavaScript to power widget functionality.
-
   TODO: Eventually this should get merged in as part of the {{squatchHead}} core helper instead of being manually included in every template
-
   Eventually we can abstract this.
-
 --}}
 
 <script>
   window.squatch = window.squatch || {};
-
 window.widgetIdent = {
+    env: "{{#if token}}{{else}}demo{{/if}}",
     engagementMedium: "{{mode}}",
-    locale: "en_US",
     tenantAlias: "{{tenantAlias}}",
-    programId: "", // is this missing?
-    appDomain: "{{appDomain}}",
+    programId: null,
+    appDomain: "https://{{appDomain}}",
     userId: "{{user.id}}",
     accountId: "{{user.accountId}}",
     token: "{{token}}"
   };
-
   window.squatch.variables = {
     shareNotification: {
       success: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess'}}',
-      failure: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure'}}'
+      failure: '{{variales 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure'}}'
     },
     lang: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.moment.lang'}}',
     relativeTime: {
@@ -45,7 +39,6 @@ window.widgetIdent = {
       yy: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.moment.relativeTime.yy'}}',
     }
   };
-
   window.squatch.user = {
     code     : '{{referredBy.referredByUser.referralCode}}',
     sharelink: '{{shareLinks.shareLink}}',
@@ -97,7 +90,6 @@ window.widgetIdent = {
     },
     fallbackImg: 'https://www.gravatar.com/avatar/0?d=blank'
   };
-
   window.squatch.analytics = {
     attributes: {
       tenant   : '{{tenantAlias}}',
@@ -105,7 +97,6 @@ window.widgetIdent = {
       accountId: '{{user.accountId}}'
     }
   };
-
   window.squatch.mode = {
     widgetMode     : '{{mode}}',
     POPUP_MODE     : 'POPUP',
@@ -114,5 +105,4 @@ window.widgetIdent = {
     DEMO_EMBED_MODE: 'DEMO_EMBED',
     NOCONTENT_MODE : 'NOCONTENT'
   };
-
-</script>
+</script>b
