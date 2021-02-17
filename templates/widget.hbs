@@ -57,7 +57,9 @@
           $(document).ready(function() {
             $('.wu-carousel').slick({
                 dots: false,
-                arrows: false
+                arrows: true,
+                prevArrow: '#prev-slider-arrow',
+                nextArrow: '#forward-slider-arrow'
             })
           })
       </script>
@@ -253,9 +255,11 @@
                     </ul>
                 </div>
                 <i data-grunticon-embed
+                    id="prev-slider-arrow"
                     class="wu-icon icon-0007_arrow-left wu-icon__spacing-scale-sm bk-action-light wu-dark bdr-radius-cir pad-xs-all d-none d-M-flex align-items-center justify-content-center"
                     data-slider-arrow-prev></i>
                 <i data-grunticon-embed
+                    id="forward-slider-arrow"
                     class="wu-icon icon-0008_arrow-right wu-icon__spacing-scale-sm bk-action-light wu-dark bdr-radius-cir pad-xs-all d-none d-M-flex align-items-center justify-content-center"
                     data-slider-arrow-next></i>
             </div>
