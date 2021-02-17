@@ -237,7 +237,7 @@
                                     "reasonSixBody": {
                                        "type": "string",
                                        "format": "markdown",
-                                       "default": "Thanks you you we've funded 200+ NGOs in 174 countries since 2001."
+                                       "default": "Thanks to you we've funded 200+ NGOs in 174 countries since 2001."
                                     },
                                     "footerNote": {
                                        "type": "string",
