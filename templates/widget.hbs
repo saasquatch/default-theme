@@ -192,7 +192,8 @@
         <div class="container pad-xl-vert">
             <h2 role="heading" aria-level="2"
                 class="font-heading-h2  pad-xl-tp pad-md-bm text-M-center">
-                Why should I refer? </h2>
+                {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTitle'}}
+            </h2>
             <div class="wu-carousel row justify-content-center w-100 mar-xs-none">
                 <div
                     class="wu-carousel__layout  wu-carousel__layout--touch-scroll  col col-16 col-L-14 pad-xs-none">
@@ -205,12 +206,12 @@
                                     aria-label="send-in-person-2">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>Global reach</strong>
+                                <strong>                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselOneMain' }}</strong>
                             </div>
                             <div class="font-body-sm">
-                                <p class="font-body-sm">From Paris to Tokyo. Send money to hundreds
-                                    of thousands of agent locations in 200+ countries around the
-                                    globe.</p>
+                                <p class="font-body-sm">
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselOneBody' }}
+                                </p>
 
                             </div>
                         </li>
@@ -221,11 +222,12 @@
                                     aria-label="dollar-with-pen">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>Many ways to send</strong>
+                                <strong>                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTwoMain' }}</strong>
                             </div>
                             <div class="font-body-sm">
-                                <p class="font-body-sm">Your friends can choose to send money the
-                                    way they like: cash, bank account, mobile wallet, etc.</p>
+                                <p class="font-body-sm">
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTwoBody' }}
+                                </p>
 
                             </div>
                         </li>
@@ -237,12 +239,12 @@
                                     aria-label="Spot-_-Money-and-receipt">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>Money in minutes<sup>1</sup></strong>
+                                <strong>{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselThreeMain' }}</strong>
                             </div>
                             <div class="font-body-sm">
-                                <p class="font-body-sm">Cash payouts are ready in
-                                    minutes<sup>1</sup>, while bank transfers only take a couple of
-                                    days.</p>
+                                <p class="font-body-sm">
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselThreeBody' }}
+                                    </p>
 
                             </div>
                         </li>
@@ -253,12 +255,12 @@
                                     aria-label="cup-computer-image">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>Peace of mind</strong>
+                                <strong>{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselFourMain' }}</strong>
                             </div>
                             <div class="font-body-sm">
-                                <p class="font-body-sm">We&rsquo;re reliable. We&rsquo;ve been
-                                    moving money for over 145 years.</p>
-
+                                <p class="font-body-sm">
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselFourBody' }}
+                                </p>
                             </div>
                         </li>
                     </ul>
@@ -284,7 +286,8 @@
             <div class="row justify-content-center">
                 <div class="col col-16 col-M-14 col-L-12 col-XL-10">
                     <h2 role="heading" aria-level="2"
-                        class="font-heading-h2 text-L-left text-center pad-md-bm">Why Western Union?
+                        class="font-heading-h2 text-L-left text-center pad-md-bm">
+                        {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonsTitle' }}
                     </h2>
                     <div role="list" class="row justify-content-between pad-sm-tp">
                         <div class="col col-16 col-M-7 mar-md-bm" role="listitem">
@@ -292,11 +295,13 @@
                                 class="wu-icon sapphire icon-0085_phone-hand d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    Easy to use </strong>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonOneTitle' }}
+                                </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-                                <p>All it takes is just a few taps on our app or clicks on the
-                                    website to send your transfer.</p>
+                                <p>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonOneBody' }}
+                                </p>
 
                             </div>
                         </div>
@@ -305,11 +310,13 @@
                                 class="wu-icon sapphire icon-0123_online d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    Competitive fees </strong>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonTwoTitle' }}
+                                    </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-                                <p>Send money with a brand used by millions.</p>
-
+                                <p>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonTwoBody' }}
+                                </p>
                             </div>
                         </div>
                         <div class="col col-16 col-M-7 mar-md-bm" role="listitem">
@@ -317,12 +324,13 @@
                                 class="wu-icon sapphire icon-0071_gift d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    Great offers </strong>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonThreeTitle' }}
+                                    </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-                                <p>Sign up for our newsletter and get some great deals on reduced
-                                    fees.</p>
-
+                                <p>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonThreeBody' }}
+                                </p>
                             </div>
                         </div>
                         <div class="col col-16 col-M-7 mar-md-bm" role="listitem">
@@ -330,12 +338,13 @@
                                 class="wu-icon sapphire icon-0193_privacy-show d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    Transparent </strong>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFourTitle' }}
+                                     </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-                                <p>We don’t have any hidden fees. You’ll know exactly how much you
-                                    will pay up front.</p>
-
+<p>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFourBody' }}
+</p>
                             </div>
                         </div>
                         <div class="col col-16 col-M-7 mar-md-bm" role="listitem">
@@ -343,24 +352,27 @@
                                 class="wu-icon sapphire icon-0210_donation d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    We care </strong>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFiveTitle' }}
+                                </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-                                <p>Our Customer Care is always there for you.</p>
-
+<p>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFiveBody' }}
+</p>
                             </div>
                         </div>
                         <div class="col col-16 col-M-7 " role="listitem">
                             <i data-grunticon-embed
                                 class="wu-icon sapphire icon-0173_Send-money-in-person-icon d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
-                                <strong>
-                                    We give back </strong>
+<strong>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonSixTitle' }}
+</strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-                                <p>Thanks to you we‘ve funded 200+ NGOs in 174 countries since 2001.
-                                </p>
-
+<p>
+                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonSixBody' }}
+</p>
                             </div>
                         </div>
                     </div>
@@ -379,12 +391,9 @@
         <div class="container">
             <div class="row justify-content-center pad-xl-tp pad-xl-bm">
                 <div class="col col-16 col-XL-13 col-L-14">
-                    <p class="font-body-sm"><sup>1</sup>Funds may be delayed or services unavailable
-                        based on certain transaction conditions, including amount sent, destination
-                        country, currency availability, regulatory and foreign exchange issues,
-                        required receiver action(s), identification requirements, agent location
-                        hours, differences in time zones, or selection of delayed options.</p>
-
+                    <p class="font-body-sm">
+                        {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.footerNote' }}
+                    </p>
                 </div>
             </div>
         </div>

@@ -125,8 +125,124 @@
                                     },
                                     "shareMediumDetails": {
                                        "type": "string",
+                                       "format": "markdown",
                                        "title": "Share Medium Details",
                                        "default": "Or share using below channels"
+                                    },
+                                    "carouselTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Why should I refer?"
+                                    },
+                                    "carouselOneTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Global reach"
+                                    },
+                                    "carouselOneBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "From Paris to Tokyo. Send money to hundreds of thousands of agent locations in 200+ countries around the globe."
+                                    },
+                                    "carouselTwoTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Many ways to send"
+                                    },
+                                    "carouselTwoBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Your friends can choose to send money the way they like: cash, bank account, mobile wallet, etc."
+                                    },
+                                    "carouselThreeTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Money in minutes<sup>1</sup>"
+                                    },
+                                    "carouselThreeBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Cash payouts are ready in minutes<sup>1</sup>, while bank transfers only take a couple of days."
+                                    },
+                                    "carouselFourTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Peace of mind"
+                                    },
+                                    "carouselFourBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "We’re reliable. We’ve been moving money for over 145 years."
+                                    },
+                                    "reasonsTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Why Western Union?"
+                                    },
+                                    "reasonOneTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Easy to use"
+                                    },
+                                    "reasonOneBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "All it takes is just a few taps on our app or clicks on the website to send your transfer."
+                                    },
+                                    "reasonTwoTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Competitive fees"
+                                    },
+                                    "reasonTwoBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Send money with a brand used by millions."
+                                    },
+                                    "reasonThreeTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Great offers"
+                                    },
+                                    "reasonThreeBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Sign up for our newsletter and get some great deals on reduced fees."
+                                    },
+                                    "reasonFourTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Transparent"
+                                    },
+                                    "reasonFourBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "We don't have any hidden fees. You'll know exactly how much you will pay up front."
+                                    },
+                                    "reasonFiveTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "We care"
+                                    },
+                                    "reasonFiveBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Our Customer Care is always there for you."
+                                    },
+                                    "reasonSixTitle": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "We give back"
+                                    },
+                                    "reasonSixBody": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "Thanks you you we've funded 200+ NGOs in 174 countries since 2001."
+                                    },
+                                    "footerNote": {
+                                       "type": "string",
+                                       "format": "markdown",
+                                       "default": "<sup>1</sup>Funds may be delayed or services unavailable based on certain transaction conditions, including amount sent, destination country, currency availability, regulatory and foreign exchange issues, required receiver action(s), identification requirements, agent location hours, differences in time zones, or selection of delayed options."
                                     }
                                  }
                               },
