@@ -132,116 +132,139 @@
                                     "carouselTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Title",
                                        "default": "Why should I refer?"
                                     },
                                     "carouselOneTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry One Title",
                                        "default": "Global reach"
                                     },
                                     "carouselOneBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry One Body",
                                        "default": "From Paris to Tokyo. Send money to hundreds of thousands of agent locations in 200+ countries around the globe."
                                     },
                                     "carouselTwoTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry Two Title",
                                        "default": "Many ways to send"
                                     },
                                     "carouselTwoBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry Two Body",
                                        "default": "Your friends can choose to send money the way they like: cash, bank account, mobile wallet, etc."
                                     },
                                     "carouselThreeTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry Three Title",
                                        "default": "Money in minutes<sup>1</sup>"
                                     },
                                     "carouselThreeBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry Three Body",
                                        "default": "Cash payouts are ready in minutes<sup>1</sup>, while bank transfers only take a couple of days."
                                     },
                                     "carouselFourTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry Four Title",
                                        "default": "Peace of mind"
                                     },
                                     "carouselFourBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Carousel Entry Four Body",
                                        "default": "We’re reliable. We’ve been moving money for over 145 years."
                                     },
                                     "reasonsTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reasons Title",
                                        "default": "Why Western Union?"
                                     },
                                     "reasonOneTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason One Title",
                                        "default": "Easy to use"
                                     },
                                     "reasonOneBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason One Body",
                                        "default": "All it takes is just a few taps on our app or clicks on the website to send your transfer."
                                     },
                                     "reasonTwoTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Two Title",
                                        "default": "Competitive fees"
                                     },
                                     "reasonTwoBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Two Body",
                                        "default": "Send money with a brand used by millions."
                                     },
                                     "reasonThreeTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Three Title",
                                        "default": "Great offers"
                                     },
                                     "reasonThreeBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Three Body",
                                        "default": "Sign up for our newsletter and get some great deals on reduced fees."
                                     },
                                     "reasonFourTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Four Title",
                                        "default": "Transparent"
                                     },
                                     "reasonFourBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Four Body",
                                        "default": "We don't have any hidden fees. You'll know exactly how much you will pay up front."
                                     },
                                     "reasonFiveTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Five Title",
                                        "default": "We care"
                                     },
                                     "reasonFiveBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Five Body",
                                        "default": "Our Customer Care is always there for you."
                                     },
                                     "reasonSixTitle": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Six Title",
                                        "default": "We give back"
                                     },
                                     "reasonSixBody": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Reason Six Body",
                                        "default": "Thanks to you we've funded 200+ NGOs in 174 countries since 2001."
                                     },
                                     "footerNote": {
                                        "type": "string",
                                        "format": "markdown",
+                                       "title": "Footer Text",
                                        "default": "<sup>1</sup>Funds may be delayed or services unavailable based on certain transaction conditions, including amount sent, destination country, currency availability, regulatory and foreign exchange issues, required receiver action(s), identification requirements, agent location hours, differences in time zones, or selection of delayed options."
                                     }
                                  }
