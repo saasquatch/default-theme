@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
+
+<head>
     <base target="_self">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Western Union Referral Program</title>
     <meta name="description" content="">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+
     {{> theme_messages}}
 
     {{squatchHead}}
 
     <!-- importing external css -->
-    {{!-- <link rel="stylesheet" id="dashicons-css" href="../assets/css/external/dashicons.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="admin-bar-css" href="../assets/css/external/admin-bar.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="query-monitor-css" href="../assets/css/external/query-monitor.css" type="text/css" media="all"> --}}
-    {{!-- <link rel="stylesheet" href="/css/external/main.css"> --}}
+    {{!--
+    <link rel="stylesheet" id="dashicons-css" href="../assets/css/external/dashicons.min.css"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="admin-bar-css" href="../assets/css/external/admin-bar.min.css"
+        type="text/css" media="all">
+    <link rel="stylesheet" id="query-monitor-css" href="../assets/css/external/query-monitor.css"
+        type="text/css" media="all"> --}}
+    {{!--
+    <link rel="stylesheet" href="/css/external/main.css"> --}}
     <link rel="stylesheet" href="{{assets 'css/external/admin-bar.min.css'}}">
     <link rel="stylesheet" href="{{assets 'css/external/dashicons.min.css'}}">
     <link rel="stylesheet" href="{{assets 'css/external/icons.data.svg.css'}}">
@@ -29,33 +33,32 @@
     <link rel="stylesheet" href="{{assets 'css/external/wuds.icons.min.css'}}">
     <link rel="stylesheet" href="{{assets 'css/external/wuds.wp.min.css'}}">
     <link rel="stylesheet" href="{{assets 'css/widget.css' }}">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript"
+        src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- Importing Vanilla Components -->
-    <script src="https://fast.ssqt.io/npm/@saasquatch/vanilla-components@1.2.x/dist/widget-components/entrypoint.js"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fast.ssqt.io/npm/@saasquatch/vanilla-components-assets@latest/icons.css"
-    />
+    <script
+        src="https://fast.ssqt.io/npm/@saasquatch/vanilla-components@1.2.x/dist/widget-components/entrypoint.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://fast.ssqt.io/npm/@saasquatch/vanilla-components-assets@latest/icons.css" />
 
     {{!-- WU assets --}}
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://unpkg.com/@saasquatchisntreal/wa-components-assets@0.0.1/style.css"
-    />
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/@saasquatchisntreal/wa-components-assets@0.0.1/style.css" />
 
     {{!-- This should have chipolo components --}}
-    <script src="https://unpkg.com/@saasquatchisntreal/wa-components@0.0.2/dist/components-starter/entrypoint.js"></script>
+    <script
+        src="https://unpkg.com/@saasquatchisntreal/wa-components@0.0.2/dist/components-starter/entrypoint.js"></script>
 
-  </head>
-  <body>
-      <script>
-          $(document).ready(function() {
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
             $('.wu-carousel__layout__list').slick({
                 dots: false,
                 arrows: true,
@@ -65,128 +68,75 @@
                 slidesToShow: 3,
                 slidesToScroll: 3
             })
-          })
-      </script>
+        })
+    </script>
 
     {{!--
 
     ALL REFERENCED VARIABLES (IN THE WIDGET)
 
-    Header:               widget.REFERRER_WIDGET.content.widgetCustomization.heading
-    Details:              widget.REFERRER_WIDGET.content.widgetCustomization.headerDetails
-    Share Code Details:   widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails 
-    Share Medium Details: widget.REFERRER_WIDGET.content.widgetCustomization.shareMediumDetails 
+    Header: widget.REFERRER_WIDGET.content.widgetCustomization.heading
+    Details: widget.REFERRER_WIDGET.content.widgetCustomization.headerDetails
+    Share Code Details: widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails
+    Share Medium Details: widget.REFERRER_WIDGET.content.widgetCustomization.shareMediumDetails
 
-    Copy Button Text:     widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy
-    Copy Succes:          widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess 
-    Copy Failure:         widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure 
+    Copy Button Text: widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy
+    Copy Succes: widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess
+    Copy Failure: widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure
 
     --}}
 
     <sqh-global-container class="squatch-container" loadingcolor="#439B76">
 
-      <div class="sqh-main-section">
-      
-      <sqh-text-component
-      sqhbody="true"
-      ismarkdown="true"
-      fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
-      text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.heading'}}"
-      color="#0a0005"
-      fontsize="50"
-      textalign="left"
-      paddingtop="0"
-      paddingbottom="0"
-      fontweight="700"
-      class="sqh-header-text"
-      ></sqh-text-component>
+        <div class="sqh-main-section">
 
-      <sqh-text-component
-      sqhbody="true"
-      fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
-      ismarkdown="true"
-      text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.headerDetails' }}"
-      color="#0a0005"
-      fontsize="20"
-      textalign="left"
-      paddingtop="24"
-      paddingbottom="24"
-      class="sqh-description-text"
-      ></sqh-text-component>
-      <sqh-text-component
-      sqhbody="true"
-      ismarkdown="true"
-      fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
-      text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails' }}"
-      color="#3D3D3D"
-      fontsize="18"
-      textalign="left"
-      paddingtop="0"
-      paddingbottom="0"
-      class="sqh-copy-cta-text"
-      ></sqh-text-component>
-      <mini-copy-box
-        text="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy'}}"
-        copysuccess="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess' }}"
-        copyfailure="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure' }}"
-        buttoncolor="#0a0005"
-        textcolor="#ffdd00"
-      ></mini-copy-box>
-      <sqh-text-component
-      sqhbody="true"
-      ismarkdown="true"
-      fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
-      text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareMediumDetails' }}"
-      color="#3D3D3D"
-      fontsize="14"
-      textalign="left"
-      paddingtop="12"
-      paddingbottom="12"
-      ></sqh-text-component>
-      <wa-share-button-container
-        emaildisplayrule="desktop-mobile"
-				emailtext=""
-        emailtextcolor="#ffdd00"
-        emailbackgroundcolor="#0a0005"
-        facebookdisplayrule="desktop-mobile"
-        facebooktext=""
-        facebooktextcolor="#ffdd00"
-        facebookbackgroundcolor="#0a0005"
-        twitterdisplayrule="hidden"
-        twittertext=""
-        twittertextcolor="#ffffff"
-        twitterbackgroundcolor="#4797d2"
-        smsdisplayrule="hidden"
-        smstext=""
-        smstextcolor="#ffffff"
-        smsbackgroundcolor="#7bbf38"
-        whatsappdisplayrule="hidden"
-        whatsapptext=""
-        whatsapptextcolor="#ffffff"
-        whatsappbackgroundcolor="#25D366"
-        linkedindisplayrule="hidden"
-        linkedintext=""
-        linkedintextcolor="#ffffff"
-        linkedinbackgroundcolor="#0084b9"
-        pinterestdisplayrule="hidden"
-        pinteresttext=""
-        pinteresttextcolor="#ffffff"
-        pinterestbackgroundcolor="#cb2027"
-        messengerdisplayrule="desktop-mobile"
-        messengertext=""
-        messengertextcolor="#ffdd00"
-        messengerbackgroundcolor="#0a0005"
-        linedisplayrule="hidden"
-        linetext=""
-        linetextcolor="#ffffff"
-        linebackgroundcolor="#00c300"
-      >
-      </wa-share-button-container>
-      </div>
-      
-      <wa-footer></wa-footer>
+            <sqh-text-component sqhbody="true" ismarkdown="true"
+                fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
+                text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.heading'}}"
+                color="#0a0005" fontsize="50" textalign="left" paddingtop="0" paddingbottom="0"
+                fontweight="700" class="sqh-header-text"></sqh-text-component>
 
-        </sqh-global-container>
+            <sqh-text-component sqhbody="true"
+                fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
+                ismarkdown="true"
+                text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.headerDetails' }}"
+                color="#0a0005" fontsize="20" textalign="left" paddingtop="24" paddingbottom="24"
+                class="sqh-description-text"></sqh-text-component>
+            <sqh-text-component sqhbody="true" ismarkdown="true"
+                fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
+                text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails' }}"
+                color="#3D3D3D" fontsize="18" textalign="left" paddingtop="0" paddingbottom="0"
+                class="sqh-copy-cta-text"></sqh-text-component>
+            <mini-copy-box
+                text="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy'}}"
+                copysuccess="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess' }}"
+                copyfailure="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure' }}"
+                buttoncolor="#0a0005" textcolor="#ffdd00"></mini-copy-box>
+            <sqh-text-component sqhbody="true" ismarkdown="true"
+                fontfamily="Euclid WU,Noto Sans,Arial,Open Sans,HelveticaNeue,Helvetica Neue,Helvetica,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol"
+                text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareMediumDetails' }}"
+                color="#3D3D3D" fontsize="14" textalign="left" paddingtop="12" paddingbottom="12">
+            </sqh-text-component>
+            <wa-share-button-container emaildisplayrule="desktop-mobile" emailtext=""
+                emailtextcolor="#ffdd00" emailbackgroundcolor="#0a0005"
+                facebookdisplayrule="desktop-mobile" facebooktext="" facebooktextcolor="#ffdd00"
+                facebookbackgroundcolor="#0a0005" twitterdisplayrule="hidden" twittertext=""
+                twittertextcolor="#ffffff" twitterbackgroundcolor="#4797d2" smsdisplayrule="hidden"
+                smstext="" smstextcolor="#ffffff" smsbackgroundcolor="#7bbf38"
+                whatsappdisplayrule="hidden" whatsapptext="" whatsapptextcolor="#ffffff"
+                whatsappbackgroundcolor="#25D366" linkedindisplayrule="hidden" linkedintext=""
+                linkedintextcolor="#ffffff" linkedinbackgroundcolor="#0084b9"
+                pinterestdisplayrule="hidden" pinteresttext="" pinteresttextcolor="#ffffff"
+                pinterestbackgroundcolor="#cb2027" messengerdisplayrule="desktop-mobile"
+                messengertext="" messengertextcolor="#ffdd00" messengerbackgroundcolor="#0a0005"
+                linedisplayrule="hidden" linetext="" linetextcolor="#ffffff"
+                linebackgroundcolor="#00c300">
+            </wa-share-button-container>
+        </div>
+
+        <wa-footer></wa-footer>
+
+    </sqh-global-container>
 
     <main class="container-fuild bk-white">
         <div class="container pad-xl-vert">
@@ -202,15 +152,19 @@
                         <li class="wu-carousel__layout__list__item">
                             <div class="mar-xs-bm">
                                 <img class="d-block" data-lazyload-mobile-desktop-
-                                    src="{{ assets 'images/send-in-person-2.svg'}}" alt="send-in-person-2"
-                                    aria-label="send-in-person-2">
+                                    src="{{ assets 'images/send-in-person-2.svg'}}"
+                                    alt="send-in-person-2" aria-label="send-in-person-2">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselOneMain' }}</strong>
+                                <strong> {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselOneMain'
+                                    }}</strong>
                             </div>
                             <div class="font-body-sm">
                                 <p class="font-body-sm">
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselOneBody' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselOneBody'
+                                    }}
                                 </p>
 
                             </div>
@@ -218,15 +172,19 @@
                         <li class="wu-carousel__layout__list__item">
                             <div class="mar-xs-bm">
                                 <img class="d-block" data-lazyload-mobile-desktop-
-                                    src="{{ assets 'images/Spot-_-dollar-with-pen.svg' }}" alt="dollar-with-pen"
-                                    aria-label="dollar-with-pen">
+                                    src="{{ assets 'images/Spot-_-dollar-with-pen.svg' }}"
+                                    alt="dollar-with-pen" aria-label="dollar-with-pen">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTwoMain' }}</strong>
+                                <strong> {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTwoMain'
+                                    }}</strong>
                             </div>
                             <div class="font-body-sm">
                                 <p class="font-body-sm">
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTwoBody' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselTwoBody'
+                                    }}
                                 </p>
 
                             </div>
@@ -239,38 +197,44 @@
                                     aria-label="Spot-_-Money-and-receipt">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselThreeMain' }}</strong>
+                                <strong>{{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselThreeMain'
+                                    }}</strong>
                             </div>
                             <div class="font-body-sm">
                                 <p class="font-body-sm">
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselThreeBody' }}
-                                    </p>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselThreeBody'
+                                    }}
+                                </p>
 
                             </div>
                         </li>
                         <li class="wu-carousel__layout__list__item">
                             <div class="mar-xs-bm">
                                 <img class="d-block" data-lazyload-mobile-desktop-
-                                    src="{{ assets 'images/cup-computer-image.svg' }}" alt="cup-computer-image"
-                                    aria-label="cup-computer-image">
+                                    src="{{ assets 'images/cup-computer-image.svg' }}"
+                                    alt="cup-computer-image" aria-label="cup-computer-image">
                             </div>
                             <div class="font-body-reg mar-xs-bm">
-                                <strong>{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselFourMain' }}</strong>
+                                <strong>{{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselFourMain'
+                                    }}</strong>
                             </div>
                             <div class="font-body-sm">
                                 <p class="font-body-sm">
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.carouselFourBody' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.carouselFourBody'
+                                    }}
                                 </p>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <i data-grunticon-embed
-                    id="prev-slider-arrow"
+                <i data-grunticon-embed id="prev-slider-arrow"
                     class="wu-icon icon-0007_arrow-left wu-icon__spacing-scale-sm bk-action-light wu-dark bdr-radius-cir pad-xs-all d-none d-M-flex align-items-center justify-content-center"
                     data-slider-arrow-prev></i>
-                <i data-grunticon-embed
-                    id="forward-slider-arrow"
+                <i data-grunticon-embed id="forward-slider-arrow"
                     class="wu-icon icon-0008_arrow-right wu-icon__spacing-scale-sm bk-action-light wu-dark bdr-radius-cir pad-xs-all d-none d-M-flex align-items-center justify-content-center"
                     data-slider-arrow-next></i>
             </div>
@@ -287,7 +251,8 @@
                 <div class="col col-16 col-M-14 col-L-12 col-XL-10">
                     <h2 role="heading" aria-level="2"
                         class="font-heading-h2 text-L-left text-center pad-md-bm">
-                        {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonsTitle' }}
+                        {{variables
+                        'widget.REFERRER_WIDGET.content.widgetCustomization.reasonsTitle' }}
                     </h2>
                     <div role="list" class="row justify-content-between pad-sm-tp">
                         <div class="col col-16 col-M-7 mar-md-bm" role="listitem">
@@ -295,12 +260,16 @@
                                 class="wu-icon sapphire icon-0085_phone-hand d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonOneTitle' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonOneTitle'
+                                    }}
                                 </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
                                 <p>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonOneBody' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonOneBody'
+                                    }}
                                 </p>
 
                             </div>
@@ -310,12 +279,16 @@
                                 class="wu-icon sapphire icon-0123_online d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonTwoTitle' }}
-                                    </strong>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonTwoTitle'
+                                    }}
+                                </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
                                 <p>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonTwoBody' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonTwoBody'
+                                    }}
                                 </p>
                             </div>
                         </div>
@@ -324,12 +297,16 @@
                                 class="wu-icon sapphire icon-0071_gift d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonThreeTitle' }}
-                                    </strong>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonThreeTitle'
+                                    }}
+                                </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
                                 <p>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonThreeBody' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonThreeBody'
+                                    }}
                                 </p>
                             </div>
                         </div>
@@ -338,13 +315,17 @@
                                 class="wu-icon sapphire icon-0193_privacy-show d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFourTitle' }}
-                                     </strong>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFourTitle'
+                                    }}
+                                </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-<p>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFourBody' }}
-</p>
+                                <p>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFourBody'
+                                    }}
+                                </p>
                             </div>
                         </div>
                         <div class="col col-16 col-M-7 mar-md-bm" role="listitem">
@@ -352,27 +333,35 @@
                                 class="wu-icon sapphire icon-0210_donation d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
                                 <strong>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFiveTitle' }}
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFiveTitle'
+                                    }}
                                 </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-<p>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFiveBody' }}
-</p>
+                                <p>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonFiveBody'
+                                    }}
+                                </p>
                             </div>
                         </div>
                         <div class="col col-16 col-M-7 " role="listitem">
                             <i data-grunticon-embed
                                 class="wu-icon sapphire icon-0173_Send-money-in-person-icon d-flex wu-icon-heading__xl mar-sm-bm justify-content-L-start justify-content-center"></i>
                             <p class="font-body-reg mar-xs-bm text-L-left text-center">
-<strong>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonSixTitle' }}
-</strong>
+                                <strong>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonSixTitle'
+                                    }}
+                                </strong>
                             </p>
                             <div class="font-body-sm text-L-left text-center">
-<p>
-                                    {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.reasonSixBody' }}
-</p>
+                                <p>
+                                    {{variables
+                                    'widget.REFERRER_WIDGET.content.widgetCustomization.reasonSixBody'
+                                    }}
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -392,7 +381,8 @@
             <div class="row justify-content-center pad-xl-tp pad-xl-bm">
                 <div class="col col-16 col-XL-13 col-L-14">
                     <p class="font-body-sm">
-                        {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.footerNote' }}
+                        {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.footerNote'
+                        }}
                     </p>
                 </div>
             </div>
@@ -400,6 +390,7 @@
     </section>
     <!-- footnote section end -->
     <!--  -->
-  </body>
-  </body>
+</body>
+</body>
+
 </html>
