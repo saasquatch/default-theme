@@ -1,0 +1,145 @@
+/*
+** Colors Mixins
+*/
+/*
+** Border Radius Mixins
+*/
+/*
+** Border Mixins
+*/
+/*
+ * Spacing Mixins
+ * @input $type = padding, margin, padding-top, margin-top,...
+ * @input $size = xs, sm, md, lg, xl, xxl, xxxl
+ */
+/*
+ * Shadow Mixins
+ * Inputs are the usual box-shadow properties
+ * @input $h-offset Horiz offset of shadow: + numbers shift right of div. - numbers shift left of div
+ * @input $v-offset Vert offset of shadow: + numbers shift below div. - numbers shift above div
+ * @input $blur Blur radius. higher number means more blurred shadow
+ * @input $spread Spread radius. + value increases size of shadow. - value decreases size of shadow
+ * @input $color  Color of shadow. Default is text color.
+ *
+ * See variables\_shadow.scss for various maps used as inputs for _shadow.scss
+ * Example of mixin output:
+ * -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+ * -moz-box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+ * box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+ */
+/*
+ * Animation Mixins
+ * Inputs are the usual transition properties
+ * @input $property transition-property
+ * @input $duration transition-duration
+ * @input $duration transition-duration
+ * @input $duration transition-duration
+ * See variables\_animation.variables.scss for various maps used as inputs
+ * Example of mixin output:
+ * Input : $animation-1s-map: (property: all, duration: 1s, function: linear, delay: 0.3s );
+ * Usage: @include setTransition($animation-1s-map...);
+ * Output: {
+ *            transition-property: all;
+ *            transition-duration: 1s;
+ *            transition-delay: 0.3s;
+ *            transition-timing-function: linear;
+ *         }
+ */
+/*
+ * Touch Action Mixins
+ * Inputs are the usual touch action properties
+ * Outputs: auto | none | [ [ x | left | right ] || [ y | up | down ] || zoom ] | manipulation
+ * Outputs: auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation
+ * @input $args
+ * @Validations: "pan-left pan-right" is invalid since "pan-x" is simpler.
+ * setTouchAction(left, right) will output "pan-x".
+ * Check https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action for more details
+ * Example of mixin output:
+ * Usage: @include setTouchAction(auto|none|up|down|x|y|left|right|zoom);
+ * Input: x
+ * Output: touch-action : pan-x;
+ *
+ * Input: y
+ * Output: touch-action : pan-y;
+ *
+ * Input: up, down
+ * Output: touch-action : pan-y;
+ *
+ * Input: up, down, left, right, zoom
+ * Output: touch-action : pan-x pan-y, pinch-zoom;
+ */
+/*
+ * Make List Item Mixin
+ * @input $col = 5
+ */
+/*
+ * Absolute Position Mixins
+ * Inputs are cordinates for X, Y position on screen
+ * @input top center
+ * setAbsolutePosition(#y-position, #x-position).
+ * Usage: @include setAbsolutePosition(top, left);
+ * Input: top, left
+ * Output:
+ *         position: absolute; left: 0; top: 0;
+ *
+ * Input: top, center
+ * Output:
+ *         position: absolute; left: 50%; top: 0;translate: translateX(-50%);
+ *
+ */
+@font-face {
+  font-family: 'Euclid WU';
+  src: url("../src/assets/fonts/EN/euclidwu-light-webfont.woff2") format("woff2"), url("../src/assets/fonts/EN/euclidwu-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Euclid WU';
+  src: url("../src/assets/fonts/EN/euclidwu-regular-webfont.woff2") format("woff2"), url("../src/assets/fonts/EN/euclidwu-regular-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Euclid WU';
+  src: url("../src/assets/fonts/EN/euclidwu-medium-webfont.woff2") format("woff2"), url("../src/assets/fonts/EN/euclidwu-medium-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Euclid WU';
+  src: url("../src/assets/fonts/EN/euclidwu-bold-webfont.woff2") format("woff2"), url("../src/assets/fonts/EN/euclidwu-bold-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+html .font-weight-light,
+body .font-weight-light,
+button .font-weight-light,
+input .font-weight-light {
+  font-weight: 300; }
+
+html,
+body,
+button,
+input, html .font-weight-regular,
+body .font-weight-regular,
+button .font-weight-regular,
+input .font-weight-regular {
+  font-weight: 500; }
+
+html .font-weight-medium,
+body .font-weight-medium,
+button .font-weight-medium,
+input .font-weight-medium {
+  font-weight: 700; }
+
+html .font-weight-bold,
+body .font-weight-bold,
+button .font-weight-bold,
+input .font-weight-bold {
+  font-weight: 900; }
+
+html,
+body,
+button,
+input {
+  font-family: "Euclid WU", "Noto Sans", "Segoe UI", "Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
