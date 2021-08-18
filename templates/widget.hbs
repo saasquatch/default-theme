@@ -19,6 +19,19 @@
     <script src="{{assets 'javascript/base.js'}}"></script>
     <script src="{{assets 'javascript/events.js'}}"></script>
 
+    <!-- IMPORT BASE PACKAGES -->
+    <script src="https://fast-staging.ssqt.io/npm/@saasquatch/vanilla-components@1.2.2/dist/widget-components/widget-components.js"></script>
+    <script src="https://unpkg.com/@themesquatch_test/mint-components@1.1.0-1/dist/mint-components/mint-components.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@saasquatch/vanilla-components-assets@latest/icons.css"
+    />
+
+    <!-- IMPORT THEME PACKAGE -->
+    <script src="https://fast.ssqt.io/npm/@saasquatch/hungry-harvest-components@0.0.1-1/dist/hungry-harvest-components/hungry-harvest-components.js"></script>
+
+
     <!--[if lt IE 9]>
       <script src="{{assets 'libs/bind-polyfill.js'}}"></script>
       <script src="{{assets 'libs/html5shiv-printshiv.min.js'}}"></script>
@@ -36,78 +49,140 @@
       body .squatch-container {
         font-family: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.widgetFont'}};
       }
-      .squatch-container-popup {
-        height: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.popupHeight'}};
-        margin: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.popupMargin'}};
-        z-index: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.popupZIndex'}};
-      }
     </style>
   </head>
 
   <body>
-    <main class="squatch-container squatch-container-{{lower mode}}">
-      <div class="squatch-body">
-        {{> title}}
+    <shh-theme>
+      <shh-widget-top></shh-widget-top>
+      <shh-share>
+        <sqh-text-component
+          slot="title"
+          sqhbody="true"
+          ishidden="false"
+          ismarkdown="true"
+          text="Share the link below or use the code **<sqh-referral-code />**"
+          color="#000000"
+          fontsize="24"
+          textalign="center"
+          paddingtop="20"
+          paddingbottom="20"
+        >
+        </sqh-text-component>
+        <sqh-copy-link-button
+          slot="copyButton"
+          ishidden="false"
+          copysuccess="copied!"
+          copyfailure="Press Ctrl+C to copy"
+          text="Copy"
+          buttoncolor="#ff5e00"
+          textcolor="#FFFFFF"
+          sharelink="TESTING"
+        >
+        </sqh-copy-link-button>
+        <sqh-share-button-container
+          slot="shareButtons"
+          ishidden="false"
+          emaildisplayrule="mobile-and-desktop"
+          emailtext="Email"
+          emailtextcolor="#ffffff"
+          emailbackgroundcolor="#ff5e00"
+          emailiconsize="1.5"
+          facebookdisplayrule="mobile-and-desktop"
+          facebooktext="Share"
+          facebooktextcolor="#ffffff"
+          facebookbackgroundcolor="#ff5e00"
+          facebookiconsize="1.5"
+          twitterdisplayrule="mobile-and-desktop"
+          twittertext="Share"
+          twittertextcolor="#ffffff"
+          twitterbackgroundcolor="#ff5e00"
+          twittericonsize="1.5"
+          smsdisplayrule="hidden"
+          smstext="SMS"
+          smstextcolor="#ffffff"
+          smsbackgroundcolor="#7bbf38"
+          whatsappdisplayrule="hidden"
+          whatsapptext="Whatspp"
+          whatsapptextcolor="#ffffff"
+          whatsappbackgroundcolor="#25D366"
+          linkedindisplayrule="hidden"
+          linkedintext="LinkedIn"
+          linkedintextcolor="#ffffff"
+          linkedinbackgroundcolor="#0084b9"
+          pinterestdisplayrule="hidden"
+          pinteresttext="Pinterest"
+          pinteresttextcolor="#ffffff"
+          pinterestbackgroundcolor="#cb2027"
+          messengerdisplayrule="hidden"
+          messengertext="Messenger"
+          messengertextcolor="#ffffff"
+          messengerbackgroundcolor="#0084ff"
+          linedisplayrule="hidden"
+          linetext="Line Messenger"
+          linetextcolor="#ffffff"
+          linebackgroundcolor="#00c300"
+        >
+        </sqh-share-button-container>
+      </shh-share>
+      <shh-rewards>
+        <sqh-text-component
+          class="rewards-title"
+          slot="title"
+          sqhreferralsheader="true"
+          ismarkdown="true"
+          ishidden="false"
+          text="**REWARDS**"
+          color="#000000"
+          fontsize="13"
+          textalign="center"
+          paddingtop="25"
+          paddingbottom="15"
+        >
+        </sqh-text-component>
 
-        <button class="close squatch-header-close" data-close-panel="#squatch-panel">{{variables 'widget.REFERRER_WIDGET.content.textVariables.panelClose'}}</button>
+        <div class="stats-container" slot="stats">
+          <sqm-big-stat
+            class="stat"
+            flex-reverse="false"
+            alignment="center"
+            stat-type="/rewardsAssigned/CREDIT/USD"
+          >
+            <sqm-text>
+              <p class="stat-description">TOTAL CREDIT EARNED</p>
+            </sqm-text>
+          </sqm-big-stat>
+          <sqm-big-stat
+            class="stat"
+            flex-reverse="false"
+            alignment="center"
+            stat-type="/rewardsAvailable/CREDIT/USD"
+          >
+            <sqm-text>
+              <p class="stat-description">CREDIT AVAILABLE</p>
+            </sqm-text>
+          </sqm-big-stat>
+          <sqm-big-stat
+            class="stat"
+            flex-reverse="false"
+            alignment="center"
+            stat-type="/referralsCount"
+          >
+            <sqm-text>
+              <p class="stat-description">FRIENDS REFERRED</p>
+            </sqm-text>
+          </sqm-big-stat>
+        </div>
 
-        {{> lead}}
-        {{> cta}}
-        {{> share}}
-      </div>
-
-      {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.email}}
-        {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
-          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#if user.email}}
-              {{#if user.firstName}}
-                {{#if user.lastName}}
-                  {{> _squatch-panel}}
-                {{else}} {{> _squatch-form}} {{/if}}
-              {{else}} {{> _squatch-form}} {{/if}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{else}}
-            {{#if user.email}}
-              {{#if user.firstName}}
-                {{> _squatch-panel}}
-              {{else}} {{> _squatch-form}} {{/if}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{/if}}
-        {{else}}
-          {{#if user.email}}
-            {{> _squatch-panel}}
-          {{else}} {{> _squatch-form}} {{/if}}
-        {{/if}}
-      {{else}}
-        {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.firstName}}
-          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#if user.firstName}}
-              {{#if user.lastName}}
-                {{> _squatch-panel}}
-              {{else}} {{> _squatch-form}} {{/if}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{else}}
-            {{#if user.firstName}}
-              {{> _squatch-panel}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{/if}}
-        {{else}}
-          {{#if variables.widget.REFERRER_WIDGET.content.widgetCustomization.registrationFields.lastName}}
-            {{#if user.lastName}}
-              {{> _squatch-panel}}
-            {{else}} {{> _squatch-form}} {{/if}}
-          {{else}} {{> _squatch-panel}} {{/if}}
-        {{/if}}
-      {{/if}}
-    </main>
-
-    <div id="cta">
-      {{> cta-widget cta=(variables-object 'widget.REFERRER_WIDGET.cta')}}
-    </div>
-
-    <script src="{{assets 'libs/ready.min.js'}}"></script>
-    <script src="{{assets 'libs/clipboard.min.js'}}"></script>
-    <script src="{{assets 'libs/moment.min.js'}}"></script>
-    <script src="{{assets 'javascript/widget.js'}}"></script>
+        <shh-details-button slot="detailsButton">
+          <sqm-referral-table slot="referralList" show-labels="false" program-id="a">
+            <shh-referral-table-user-column></shh-referral-table-user-column>
+            <shh-referral-table-date-column></shh-referral-table-date-column>
+            <shh-referral-table-reward-column></shh-referral-table-reward-column>
+          </sqm-referral-table>
+        </shh-details-button>
+      </shh-rewards>
+      <!-- <sqh-stencilbook></sqh-stencilbook> -->
+    </shh-theme>
   </body>
 </html>
