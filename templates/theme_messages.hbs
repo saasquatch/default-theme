@@ -10,7 +10,18 @@
 
 <script>
   window.squatch = window.squatch || {};
-
+  
+  window.widgetIdent = {
+    env: "{{#if token}}{{else}}demo{{/if}}",
+    engagementMedium: "{{mode}}",
+    tenantAlias: "{{tenantAlias}}",
+    programId: null,
+    appDomain: "https://{{appDomain}}",
+    userId: "{{user.id}}",
+    accountId: "{{user.accountId}}",
+    token: "{{token}}"
+  };
+  
   window.squatch.variables = {
     shareNotification: {
       success: '{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess'}}',
