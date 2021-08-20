@@ -29,7 +29,7 @@
     />
 
     <!-- IMPORT THEME PACKAGE -->
-    <script src="https://fast.ssqt.io/npm/@saasquatch-themes/hungry-harvest-components@0.0.1-7/dist/hungry-harvest-components/hungry-harvest-components.js"></script>
+    <script src="https://fast.ssqt.io/npm/@saasquatch-themes/hungry-harvest-components@0.0.1-8/dist/hungry-harvest-components/hungry-harvest-components.js"></script>
 
 
     <!--[if lt IE 9]>
@@ -53,7 +53,7 @@
   </head>
 
   <body>
-    <shh-theme class="squatch-containter">
+    <shh-theme class="squatch-container">
       <shh-widget-top>
         <sqh-close-button slot="closeButton" text="&#10005;"></sqh-close-button>
       </shh-widget-top>
@@ -63,7 +63,7 @@
           sqhbody="true"
           ishidden="false"
           ismarkdown="true"
-          text='Share the link below or use the code **{{referredBy.referredByUser.referralCode}}**'
+          text='Share the link below or use the code **<shh-referral-code program-id="classic" />**'
           color="#000000"
           fontsize="24"
           textalign="center"
