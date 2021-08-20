@@ -53,15 +53,17 @@
   </head>
 
   <body>
-    <shh-theme class="squatch-container">
-      <shh-widget-top></shh-widget-top>
+    <shh-theme class="squatch-containter">
+      <shh-widget-top>
+        <sqh-close-button slot="closeButton" text="&#10005;"></sqh-close-button>
+      </shh-widget-top>
       <shh-share>
         <sqh-text-component
           slot="title"
           sqhbody="true"
           ishidden="false"
           ismarkdown="true"
-          text="Share the link below or use the code **<sqh-referral-code />**"
+          text='Share the link below or use the code **<shh-referral-code program-id="classic" />**'
           color="#000000"
           fontsize="24"
           textalign="center"
@@ -156,7 +158,7 @@
             class="stat"
             flex-reverse="false"
             alignment="center"
-            stat-type="/rewardsAvailable/CREDIT/USD"
+            stat-type="/rewardsAssigned/CREDIT/USD"
           >
             <sqm-text>
               <p class="stat-description">CREDIT AVAILABLE</p>
@@ -175,7 +177,13 @@
         </div>
 
         <shh-details-button slot="detailsButton">
-          <sqm-referral-table slot="referralList" show-labels="false" program-id="classic">
+          <sqm-referral-table
+            slot="referralList"
+            show-labels="false"
+            program-id="classic"
+            prev-label="Previous"
+            more-label="View More"
+          >
             <shh-referral-table-user-column></shh-referral-table-user-column>
             <shh-referral-table-date-column></shh-referral-table-date-column>
             <shh-referral-table-reward-column></shh-referral-table-reward-column>
