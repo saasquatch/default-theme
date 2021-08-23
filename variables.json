@@ -230,13 +230,13 @@
                                        "type": "object",
                                        "properties": {
                                           "referralsNumber": {
-                                             "default": "Friends Referred"
+                                             "default": "FRIENDS REFERRED"
                                           },
                                           "rewardsNumber": {
-                                             "default": "Rewards Earned"
+                                             "default": "TOTAL CREDIT EARNED"
                                           },
-                                          "rewardsPending": {
-                                             "default": "Rewards Pending"
+                                          "availableNumber": {
+                                             "default": "CREDIT AVAILABLE"
                                           }
                                        }
                                     },

@@ -63,7 +63,7 @@
           sqhbody="true"
           ishidden="false"
           ismarkdown="true"
-          text='Share the link below or use the code **<shh-referral-code program-id="classic" />**'
+          text="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.shareCodeDetails'}}"
           color="#000000"
           fontsize="24"
           textalign="center"
@@ -74,8 +74,8 @@
         <sqh-copy-link-button
           slot="copyButton"
           ishidden="false"
-          copysuccess="copied!"
-          copyfailure="Press Ctrl+C to copy"
+          copysuccess="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess'}}"
+          copyfailure="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure'}}"
           text="Copy"
           buttoncolor="#ff5e00"
           textcolor="#FFFFFF"
@@ -134,7 +134,7 @@
           sqhreferralsheader="true"
           ismarkdown="true"
           ishidden="false"
-          text="**REWARDS**"
+          text="**{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsTitle'}}**"
           color="#000000"
           fontsize="13"
           textalign="center"
@@ -151,7 +151,7 @@
             stat-type="/rewardsAssigned/CREDIT/USD"
           >
             <sqm-text>
-              <p class="stat-description">TOTAL CREDIT EARNED</p>
+              <p class="stat-description">{{variables 'widget.REFERRER_WIDGET.content.textVariables.statsDescriptions.rewardsNumber'}}</p>
             </sqm-text>
           </sqm-big-stat>
           <sqm-big-stat
@@ -161,7 +161,7 @@
             stat-type="/rewardsAssigned/CREDIT/USD"
           >
             <sqm-text>
-              <p class="stat-description">CREDIT AVAILABLE</p>
+              <p class="stat-description">{{variables 'widget.REFERRER_WIDGET.content.textVariables.statsDescriptions.availableNumber'}}</p>
             </sqm-text>
           </sqm-big-stat>
           <sqm-big-stat
@@ -171,7 +171,7 @@
             stat-type="/referralsCount"
           >
             <sqm-text>
-              <p class="stat-description">FRIENDS REFERRED</p>
+              <p class="stat-description">{{variables 'widget.REFERRER_WIDGET.content.textVariables.statsDescriptions.referralsNumber'}}</p>
             </sqm-text>
           </sqm-big-stat>
         </div>
@@ -181,8 +181,8 @@
             slot="referralList"
             show-labels="false"
             program-id="classic"
-            prev-label="Previous"
-            more-label="View More"
+            prev-label="{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollPrevious'}}"
+            more-label="{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollNext'}}"
           >
             <shh-referral-table-user-column></shh-referral-table-user-column>
             <shh-referral-table-date-column></shh-referral-table-date-column>
