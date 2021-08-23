@@ -109,6 +109,9 @@
                                     "headerColor":{
                                        "default":"#4486E1"
                                     },
+                                    "referralsTitle": {
+                                       "default": "REWARDS"
+                                    },
                                     "shareCodeDetails":{
                                        "type":"string",
                                        "format":"markdown",
@@ -185,9 +188,6 @@
                                              "default": "CREDIT AVAILABLE"
                                           }
                                        }
-                                    },
-                                    "referralsTitle": {
-                                       "default": "REWARDS"
                                     },
                                     "referralsScroll": {
                                        "title": "Referral Scroll Actions",
