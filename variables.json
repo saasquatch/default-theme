@@ -165,9 +165,6 @@
                                        "default":"0"
                                     }
                                  }
-                              },
-                              {
-                                 "$ref":"#/definitions/widget/definitions/content/definitions/generalBody"
                               }
                            ]
                         },
