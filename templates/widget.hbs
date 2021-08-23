@@ -29,7 +29,7 @@
     />
 
     <!-- IMPORT THEME PACKAGE -->
-    <script src="https://fast.ssqt.io/npm/@saasquatch-themes/hungry-harvest-components@0.0.1-13/dist/hungry-harvest-components/hungry-harvest-components.js"></script>
+    <script src="https://fast.ssqt.io/npm/@saasquatch-themes/hungry-harvest-components@0.0.1-14/dist/hungry-harvest-components/hungry-harvest-components.js"></script>
 
 
     <!--[if lt IE 9]>
@@ -41,20 +41,15 @@
       <script src="{{assets 'libs/matchMedia.js'}}"></script>
       <script src="{{assets 'libs/matchMedia.addListener.js'}}"></script>
     <![endif]-->
-
-   <style>
-      .squatch-container .squatch-title {
-        color: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.headerColor'}};
-      }
-      body .squatch-container {
-        font-family: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.widgetFont'}};
-      }
-    </style>
   </head>
 
   <body>
     <shh-theme>
-      <shh-widget-top>
+      <shh-widget-top
+        subtitle="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.subtitle'}}"
+        header="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.header'}}"
+        body="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.body'}}"
+      >
         <sqh-close-button slot="closeButton" text="&#10005;"></sqh-close-button>
       </shh-widget-top>
       <shh-share>
@@ -76,7 +71,7 @@
           ishidden="false"
           copysuccess="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationSuccess'}}"
           copyfailure="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareNotificationFailure'}}"
-          text="Copy"
+          text="{{variables 'widget.REFERRER_WIDGET.content.textVariables.shareButtons.copy'}}"
           buttoncolor="#ff5e00"
           textcolor="#FFFFFF"
           sharelink="TESTING"
@@ -176,7 +171,11 @@
           </sqm-big-stat>
         </div>
 
-        <shh-details-button slot="detailsButton">
+        <shh-details-button
+          slot="detailsButton"
+          hide="{{variables 'widget.REFERRER_WIDGET.content.textVariables.details.hide'}}"
+          show="{{variables 'widget.REFERRER_WIDGET.content.textVariables.details.show'}}"
+        >
           <sqm-referral-table
             slot="referralList"
             show-labels="false"

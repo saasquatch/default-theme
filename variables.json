@@ -103,14 +103,25 @@
                               {
                                  "title":"Customize Referral Widget",
                                  "properties":{
-                                    "widgetFont":{
-                                       "default":"\"Helvetica Neue\",Helvetica,Arial,sans-serif"
+                                    "subtitle": {
+                                       "title": "Subtitle",
+                                       "default": "Share the harvest love!",
+                                       "type": "string"
                                     },
-                                    "headerColor":{
-                                       "default":"#4486E1"
+                                    "header": {
+                                       "title": "Main Header Text",
+                                       "default": "Give 10, get 10",
+                                       "type": "string"
+                                    },
+                                    "body": {
+                                       "title": "Body Text",
+                                       "default": "Refer your friends to give Hungry Harvest a try and they'll get $10 off their first order. As a thank you for sharing the love, we'll add a $10 credit to your account when they recieve their first delivery!",
+                                       "type": "string"
                                     },
                                     "referralsTitle": {
-                                       "default": "REWARDS"
+                                       "title": "Referral Table Title",
+                                       "default": "REWARDS",
+                                       "type": "string"
                                     },
                                     "shareCodeDetails":{
                                        "type":"string",
@@ -186,6 +197,18 @@
                                           },
                                           "availableNumber": {
                                              "default": "CREDIT AVAILABLE"
+                                          }
+                                       }
+                                    },
+                                    "details": {
+                                       "title": "Show/Hide Details",
+                                       "type": "object",
+                                       "properties": {
+                                          "show": {
+                                             "default": "Show Details"
+                                          },
+                                          "hide": {
+                                             "default": "Hide Details"
                                           }
                                        }
                                     },
@@ -784,43 +807,6 @@
                   "generalBody":{
                      "type":"object",
                      "properties":{
-                        "widgetFont":{
-                           "type":"string",
-                           "title":"Widget Font:",
-                           "enum":[
-                              "\"Helvetica Neue\",Helvetica,Arial,sans-serif",
-                              "'Lato',sans-serif",
-                              "'Times New Roman'",
-                              "Arial",
-                              "Courier",
-                              "Tahoma",
-                              "Verdana",
-                              "Georgia"
-                           ],
-                           "options":{
-                              "enum_titles":[
-                                 "Helvetica Neue",
-                                 "Lato",
-                                 "Times New Roman",
-                                 "Arial",
-                                 "Courier",
-                                 "Tahoma",
-                                 "Verdana",
-                                 "Georgia"
-                              ]
-                           }
-                        },
-                        "headerColor":{
-                           "type":"string",
-                           "format":"text",
-                           "minLength":1,
-                           "title":"Heading Text Color (hex code):",
-                           "options":{
-                              "validate":[
-                                 "hex-color"
-                              ]
-                           }
-                        },
                         "heading":{
                            "type":"string",
                            "minLength":1,
