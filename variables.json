@@ -146,7 +146,7 @@
                                     "popupHeight":{
                                        "title":"Popup Height",
                                        "type":"string",
-                                       "default":"486px"
+                                       "default":"985px"
                                     },
                                     "popupZIndex":{
                                        "title":"Popup Z Index",
