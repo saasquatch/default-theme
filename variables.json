@@ -142,21 +142,6 @@
                                              "handlebars"
                                           ]
                                        }
-                                    },
-                                    "popupHeight":{
-                                       "title":"Popup Height",
-                                       "type":"string",
-                                       "default":"985px"
-                                    },
-                                    "popupZIndex":{
-                                       "title":"Popup Z Index",
-                                       "type":"integer",
-                                       "default":1
-                                    },
-                                    "popupMargin":{
-                                       "title":"Popup Margin",
-                                       "type":"string",
-                                       "default":"0"
                                     }
                                  }
                               }

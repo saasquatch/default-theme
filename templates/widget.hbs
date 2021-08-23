@@ -41,17 +41,10 @@
       <script src="{{assets 'libs/matchMedia.js'}}"></script>
       <script src="{{assets 'libs/matchMedia.addListener.js'}}"></script>
     <![endif]-->
-    <style>
-      .squatch-container-popup {
-        height: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.popupHeight'}};
-        margin: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.popupMargin'}};
-        z-index: {{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.popupZIndex'}};
-      }
-    </style>
   </head>
 
   <body>
-    <shh-theme class="squatch-container-{{lower mode}}">
+    <shh-theme>
       <shh-widget-top
         subtitle="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.subtitle'}}"
         header="{{variables 'widget.REFERRER_WIDGET.content.widgetCustomization.header'}}"
