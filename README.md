@@ -23,5 +23,6 @@ window.widgetIdent = {
   };
 ```
 
-Note, for `programId:"classic"` to work for classic programs, it must be using `mint-components@1.1.3` or higher, otherwise use `programId: null`.
+Note, for `programId: "classic"` to work for classic programs, it must be using `mint-components@1.1.2` or higher, otherwise use `programId: null`.
 
+**IMPORTANT**: Make sure to update the version numbers of the imported packages to bring in the changes into the hybrid theme. This includes mint/vanilla component packages. It sometimes takes a few refreshes until a hybrid widget pulls in the most up to date packages after an update.
