@@ -184,6 +184,16 @@
             more-label="{{variables 'widget.REFERRER_WIDGET.content.textVariables.referralsScroll.scrollNext'}}"
             show-referrer="true"
           >
+          <div style="width: 100%" slot="empty">
+              <sqm-text>
+                <h3 style="color: #777777">No Referrals Yet</h3>
+              </sqm-text>
+            </div>
+            <div style="width: 100%" slot="loading">
+              <sl-skeleton style="margin-bottom: 28px"></sl-skeleton>
+              <sl-skeleton style="margin-bottom: 28px"></sl-skeleton>
+              <sl-skeleton></sl-skeleton>
+            </div>
             <shh-referral-table-user-column></shh-referral-table-user-column>
             <shh-referral-table-status-column></shh-referral-table-status-column>
             <shh-referral-table-reward-column></shh-referral-table-reward-column>
